@@ -233,7 +233,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (e.key === 'Escape') closeBooking();
         });
 
-        document.querySelectorAll('a[href="https://cal.com/themdemosites/30min"], .btn-book').forEach(el => {
+        document.querySelectorAll('a[href="https://cal.com/themdemosites/30min"]:not([target="_blank"]), .btn-book').forEach(el => {
             el.addEventListener('click', function (e) {
                 e.preventDefault();
                 openBooking();
