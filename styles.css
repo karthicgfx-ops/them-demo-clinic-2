@@ -1714,6 +1714,22 @@ body {
     text-align: center;
     transition: all 0.4s var(--ease);
     position: relative;
+    background-size: cover;
+    background-position: center;
+}
+
+.card-bg-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(11, 11, 11, 0.85);
+    backdrop-filter: blur(3px);
+    border-radius: var(--radius);
+}
+
+.process-card > *:not(.card-bg-overlay),
+.feature-card > *:not(.card-bg-overlay) {
+    position: relative;
+    z-index: 1;
 }
 
 .process-card:hover {
@@ -1915,6 +1931,9 @@ body {
     padding: 2rem 1.5rem;
     text-align: center;
     transition: all 0.4s var(--ease);
+    position: relative;
+    background-size: cover;
+    background-position: center;
 }
 
 .feature-card:hover {
@@ -2296,6 +2315,22 @@ body {
     border-radius: var(--radius-sm);
     padding: 1.35rem;
     transition: all 0.3s var(--ease);
+    position: relative;
+    background-size: cover;
+    background-position: center;
+}
+
+.support-card-bg {
+    position: absolute;
+    inset: 0;
+    background: rgba(11, 11, 11, 0.8);
+    backdrop-filter: blur(4px);
+    border-radius: var(--radius-sm);
+}
+
+.support-card > *:not(.support-card-bg) {
+    position: relative;
+    z-index: 1;
 }
 
 .support-card:hover {
