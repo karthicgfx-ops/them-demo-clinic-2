@@ -217,6 +217,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 setTimeout(() => { btn.innerHTML = original; btn.disabled = false; }, 2000);
             }, 1200);
         });
+    }
 
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
