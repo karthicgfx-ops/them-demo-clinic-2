@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ | Them Demo Clinic 2</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://app.cal.com/embed.css" rel="stylesheet">
+    <script type="text/javascript" src="https://app.cal.com/embed.js"></script>
+    <style>
+        .faq-list { max-width: 800px; margin: 0 auto; display: flex; flex-direction: column; gap: 0.75rem; }
+        .faq-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; transition: all 0.3s var(--ease); }
+        .faq-item:hover { border-color: var(--border-hover); }
+        .faq-item.active { border-color: var(--accent); }
+        .faq-q { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 1.15rem 1.5rem; cursor: pointer; font-size: 0.9rem; font-weight: 600; color: var(--text); transition: color 0.3s var(--ease); background: none; border: none; width: 100%; text-align: left; font-family: var(--font-display); }
+        .faq-item.active .faq-q { color: var(--accent); }
+        .faq-q i { font-size: 0.7rem; color: var(--text-muted); transition: transform 0.3s var(--ease); flex-shrink: 0; }
+        .faq-item.active .faq-q i { transform: rotate(180deg); color: var(--accent); }
+        .faq-a { max-height: 0; overflow: hidden; transition: max-height 0.35s var(--ease); }
+        .faq-a-inner { padding: 0 1.5rem 1.15rem; font-size: 0.85rem; color: var(--text-secondary); line-height: 1.8; }
+        .faq-category { margin-bottom: 2.5rem; }
+        .faq-category h3 { font-family: var(--font-display); font-size: 1.15rem; font-weight: 700; color: var(--accent); margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem; }
+    </style>
+</head>
+<body>
+
+<div id="scroll-progress"></div>
+
+<div id="loader"><div class="loader-ring"></div><div class="loader-text">Them Demo Clinic 2</div></div>
+
+<nav class="navbar" id="navbar">
+    <div class="container">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-logo">
+                <span class="nav-logo-mark"><svg viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="5" stroke="#fff" stroke-width="2" fill="none"/><path d="M9 4v10M4 9h10" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg></span>
+                <span class="nav-logo-text">Them Demo Clinic 2</span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="doctors.html" class="nav-link">Doctors</a></li>
+                <li><a href="services.html" class="nav-link">Departments</a></li>
+                <li><a href="testimonials.html" class="nav-link">Testimonials</a></li>
+                <li><a href="faq.html" class="nav-link active">FAQ</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <span class="btn btn-primary btn-sm btn-book">Book Now</span>
+                <button class="hamburger" id="hamburger" aria-label="Menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<div class="mobile-overlay" id="mobileOverlay"></div>
+<div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu-header">
+        <span class="nav-logo-mark" style="width:28px;height:28px;"><svg viewBox="0 0 18 18" fill="none" width="16" height="16"><circle cx="9" cy="9" r="5" stroke="#fff" stroke-width="2" fill="none"/><path d="M9 4v10M4 9h10" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg></span>
+        <span class="nav-logo-text">Them Demo Clinic 2</span>
+    </div>
+    <ul class="mobile-nav-links">
+        <li><a href="index.html" class="mobile-nav-link">Home</a></li>
+        <li><a href="about.html" class="mobile-nav-link">About</a></li>
+        <li><a href="doctors.html" class="mobile-nav-link">Doctors</a></li>
+        <li><a href="services.html" class="mobile-nav-link">Departments</a></li>
+        <li><a href="testimonials.html" class="mobile-nav-link">Testimonials</a></li>
+        <li><a href="faq.html" class="mobile-nav-link">FAQ</a></li>
+        <li><a href="contact.html" class="mobile-nav-link">Contact</a></li>
+    </ul>
+    <span class="btn btn-primary mobile-cta btn-book">Book Appointment</span>
+</div>
+
+<main>
+    <section class="section" style="padding-top:7rem;">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">FAQ</span>
+                <h2 class="section-title">Frequently Asked <span class="text-gradient">Questions</span></h2>
+                <p class="section-text">Everything you need to know before your visit.</p>
+            </div>
+
+            <div class="faq-list fade-up">
+                <div class="faq-category">
+                    <h3><i class="fas fa-calendar-check"></i> Appointments & Booking</h3>
+                    <div class="faq-item">
+                        <button class="faq-q">How do I book an appointment? <i class="fas fa-chevron-down"></i></button>
+                        <div class="faq-a"><div class="faq-a-inner">You can book online through our website by clicking any "Book Appointment" button — this opens a calendar where you can pick a date and time that works for you. You can also call us directly at +91 99999 88888 or visit the clinic in person. Walk-ins are welcome, though appointments help reduce wait times.</div></div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-q">Can I cancel or reschedule an appointment? <i class="fas fa-chevron-down"></i></button>
+                        <div class="faq-a"><div class="faq-a-inner">Yes. You can reschedule or cancel your appointment directly through the booking confirmation link sent to your email or phone. We kindly ask for at least 24 hours notice so we can offer the slot to another patient.</div></div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-q">What should I bring to my first visit? <i class="fas fa-chevron-down"></i></button>
+                        <div class="faq-a"><div class="faq-a-inner">Please bring a valid government-issued photo ID, your insurance card (if applicable), a list of current medications, and any previous medical records or test reports. Arriving 15 minutes early helps us complete the registration smoothly.</div></div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-q">Do you offer telemedicine consultations? <i class="fas fa-chevron-down"></i></button>
+                        <div class="faq-a"><div class="faq-a-inner">Yes. We offer video consultations for follow-up visits and select primary care concerns. Telemedicine appointments can be booked through the same online booking system — just select the "Video Visit" option when choosing your appointment type.</div></div>
+                    </div>
+                </div>
+
+                <div class="faq-category">
+                    <h3><i class="fas fa-notes-medical"></i> Medical Services</h3>
+                    <div class="faq-item">
+                        <button class="faq-q">What medical departments do you have? <i class="fas fa-chevron-down"></i></button>
+                        <div class="faq-a"><div class="faq-a-inner">We have six core departments: Cardiology, Neurology, Orthopedics, Pediatrics, Dermatology, and General Medicine. Each department is led by experienced, board-certified specialists. Visit our Departments page for detailed information about each service.</div></div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-q">Do you provide second opinion consultations? <i class="fas fa-chevron-down"></i></button>
+                        <div class="faq-a"><div class="faq-a-inner">Absolutely. We offer dedicated second opinion consultations where our specialists review your diagnosis and treatment plan. This service ensures you have complete confidence in your medical decisions. Just mention "second opinion" when booking.</div></div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-q">What diagnostic facilities are available on-site? <i class="fas fa-chevron-down"></i></button>
+                        <div class="faq-a"><div class="faq-a-inner">Our clinic has a fully equipped diagnostic wing with digital X-ray, ultrasound, echocardiography, ECG, stress test, blood lab, and advanced imaging referral services. Most tests are completed during your visit with results available the same day.</div></div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-q">Do you offer emergency services? <i class="fas fa-chevron-down"></i></button>
+                        <div class="faq-a"><div class="faq-a-inner">Yes. We have a dedicated emergency care unit staffed 24/7 with trained emergency physicians and nurses. For life-threatening emergencies, please call +91 99999 88888 or visit our emergency department directly.</div></div>
+                    </div>
+                </div>
+
+                <div class="faq-category">
+                    <h3><i class="fas fa-credit-card"></i> Insurance & Billing</h3>
+                    <div class="faq-item">
+                        <button class="faq-q">Which insurance plans do you accept? <i class="fas fa-chevron-down"></i></button>
+                        <div class="faq-a"><div class="faq-a-inner">We accept a wide range of major insurance networks including ICICI Lombard, Star Health, Apollo Munich, HDFC Ergo, Niva Bupa, and many others. We also work with corporate insurance plans and third-party administrators. Please contact our billing department to verify your specific plan coverage before your visit.</div></div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-q">What are your payment options? <i class="fas fa-chevron-down"></i></button>
+                        <div class="faq-a"><div class="faq-a-inner">We accept cash, all major credit and debit cards, UPI (Google Pay, PhonePe, Paytm), net banking, and health insurance cards. We also offer easy EMI options for surgical procedures through partner financial institutions.</div></div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-q">Is there a cancellation fee? <i class="fas fa-chevron-down"></i></button>
+                        <div class="faq-a"><div class="faq-a-inner">No cancellation fee if you cancel at least 24 hours before your appointment. Late cancellations or no-shows may incur a nominal fee of ₹250 to ensure we can continue offering quality care to all patients.</div></div>
+                    </div>
+                </div>
+
+                <div class="faq-category">
+                    <h3><i class="fas fa-building"></i> Clinic & Visiting</h3>
+                    <div class="faq-item">
+                        <button class="faq-q">What are your operating hours? <i class="fas fa-chevron-down"></i></button>
+                        <div class="faq-a"><div class="faq-a-inner">We are open Monday through Friday from 8:00 AM to 8:00 PM and Saturday from 9:00 AM to 5:00 PM. We remain closed on Sundays. The emergency department operates 24/7, including Sundays and public holidays.</div></div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-q">Can family members accompany me during the consultation? <i class="fas fa-chevron-down"></i></button>
+                        <div class="faq-a"><div class="faq-a-inner">Yes. We encourage patients to bring a family member or friend for support. For pediatric and geriatric patients, at least one attendant is recommended. Waiting areas are spacious and comfortable for companions.</div></div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-q">Is parking available at the clinic? <i class="fas fa-chevron-down"></i></button>
+                        <div class="faq-a"><div class="faq-a-inner">Yes. We have complimentary parking available for both two-wheelers and four-wheelers. Valet parking is available during peak hours for patient convenience. The clinic is also well-connected by public transport.</div></div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-q">How do I access my medical records? <i class="fas fa-chevron-down"></i></button>
+                        <div class="faq-a"><div class="faq-a-inner">You can request copies of your medical records at the reception desk. Digital copies are provided free of charge. Physical copies may involve a nominal processing fee. We maintain strict confidentiality in accordance with privacy regulations.</div></div>
+                    </div>
+                </div>
+
+                <div class="faq-category">
+                    <h3><i class="fas fa-user-md"></i> Doctors & Specialists</h3>
+                    <div class="faq-item">
+                        <button class="faq-q">How are your doctors qualified? <i class="fas fa-chevron-down"></i></button>
+                        <div class="faq-a"><div class="faq-a-inner">All our doctors are board-certified specialists with extensive training from leading medical institutions. Each physician brings 10-20 years of clinical experience. Visit our Doctors page to read individual profiles and credentials.</div></div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-q">Can I choose my preferred doctor? <i class="fas fa-chevron-down"></i></button>
+                        <div class="faq-a"><div class="faq-a-inner">Yes. When booking online, you can select your preferred doctor from the available slots. If you need help choosing, our front desk team will gladly help match you with the right specialist based on your symptoms and preferences.</div></div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-q">Are the same doctors available for follow-up visits? <i class="fas fa-chevron-down"></i></button>
+                        <div class="faq-a"><div class="faq-a-inner">Yes. We maintain continuity of care — your follow-up visits will be scheduled with the same doctor whenever possible. This ensures your treatment history is well understood and your care plan remains consistent.</div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section cta" style="padding-top:2rem;">
+        <div class="container">
+            <div class="cta-card">
+                <div class="cta-bg-pattern"><span></span><span></span><span></span></div>
+                <h2 class="cta-title">Still Have Questions?</h2>
+                <p class="cta-text">Our team is here to help. Get in touch and we'll answer any query.</p>
+                <div class="cta-actions">
+                    <a href="contact.html" class="btn btn-gold btn-lg">Contact Us <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="index.html" class="nav-logo" style="margin-bottom:1rem;">
+                    <span class="nav-logo-mark" style="width:30px;height:30px;"><svg viewBox="0 0 18 18" fill="none" width="16" height="16"><circle cx="9" cy="9" r="5" stroke="#fff" stroke-width="2" fill="none"/><path d="M9 4v10M4 9h10" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg></span>
+                    <span class="nav-logo-text">Them Demo Clinic 2</span>
+                </a>
+                <p>Thoughtful healthcare. Rooted in expertise, driven by compassion.</p>
+                <div class="footer-social">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="doctors.html">Doctors</a></li>
+                    <li><a href="services.html">Departments</a></li>
+                    <li><a href="testimonials.html">Testimonials</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Departments</h4>
+                <ul>
+                    <li><a href="services.html#cardiology">Cardiology</a></li>
+                    <li><a href="services.html#neurology">Neurology</a></li>
+                    <li><a href="services.html#pediatrics">Pediatrics</a></li>
+                    <li><a href="services.html#orthopedics">Orthopedics</a></li>
+                </ul>
+            </div>
+            <div class="footer-hours">
+                <h4>Hours</h4>
+                <ul>
+                    <li><span>Mon — Fri</span><span>8:00 AM — 8:00 PM</span></li>
+                    <li><span>Saturday</span><span>9:00 AM — 5:00 PM</span></li>
+                    <li><span>Sunday</span><span>Emergency Only</span></li>
+                </ul>
+                <span class="btn btn-primary btn-full btn-book" style="margin-top:1rem;">Book Appointment</span>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Them Demo Clinic 2. All rights reserved.</p>
+            <div class="footer-bottom-links">
+                <a href="#">Privacy</a>
+                <a href="#">Terms</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<a href="#" id="backTop" aria-label="Back to top"><i class="fas fa-arrow-up"></i></a>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.faq-q').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const item = btn.parentElement;
+            const isActive = item.classList.contains('active');
+            document.querySelectorAll('.faq-item.active').forEach(el => el.classList.remove('active'));
+            if (!isActive) item.classList.add('active');
+        });
+    });
+});
+</script>
+<script src="script.js"></script>
+</body>
+</html>

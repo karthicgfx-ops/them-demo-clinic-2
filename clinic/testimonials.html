@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testimonials | Them Demo Clinic 2</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://app.cal.com/embed.css" rel="stylesheet">
+    <script type="text/javascript" src="https://app.cal.com/embed.js"></script>
+    <style>
+        .tm-page-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+        .tm-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 2rem; transition: all 0.4s var(--ease); }
+        .tm-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); border-color: var(--border-hover); }
+        .tm-stars { color: var(--gold); font-size: 0.75rem; display: flex; align-items: center; gap: 0.2rem; margin-bottom: 0.75rem; }
+        .tm-stars span { color: var(--text-muted); font-size: 0.7rem; font-weight: 600; margin-left: 0.25rem; }
+        .tm-text { font-size: 0.9rem; color: var(--text-secondary); line-height: 1.8; font-style: italic; margin-bottom: 1.25rem; }
+        .tm-author { display: flex; align-items: center; gap: 0.75rem; }
+        .tm-avatar { width: 42px; height: 42px; border-radius: 50%; overflow: hidden; flex-shrink: 0; }
+        .tm-avatar img { width: 100%; height: 100%; object-fit: cover; }
+        .tm-author h4 { font-size: 0.85rem; font-weight: 700; color: var(--text); }
+        .tm-author span { font-size: 0.7rem; color: var(--text-muted); }
+        @media (max-width: 768px) { .tm-page-grid { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+
+<div id="scroll-progress"></div>
+
+<div id="loader"><div class="loader-ring"></div><div class="loader-text">Them Demo Clinic 2</div></div>
+
+<nav class="navbar" id="navbar">
+    <div class="container">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-logo">
+                <span class="nav-logo-mark"><svg viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="5" stroke="#fff" stroke-width="2" fill="none"/><path d="M9 4v10M4 9h10" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg></span>
+                <span class="nav-logo-text">Them Demo Clinic 2</span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="doctors.html" class="nav-link">Doctors</a></li>
+                <li><a href="services.html" class="nav-link">Departments</a></li>
+                <li><a href="testimonials.html" class="nav-link active">Testimonials</a></li>
+                <li><a href="faq.html" class="nav-link">FAQ</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <span class="btn btn-primary btn-sm btn-book">Book Now</span>
+                <button class="hamburger" id="hamburger" aria-label="Menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<div class="mobile-overlay" id="mobileOverlay"></div>
+<div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu-header">
+        <span class="nav-logo-mark" style="width:28px;height:28px;"><svg viewBox="0 0 18 18" fill="none" width="16" height="16"><circle cx="9" cy="9" r="5" stroke="#fff" stroke-width="2" fill="none"/><path d="M9 4v10M4 9h10" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg></span>
+        <span class="nav-logo-text">Them Demo Clinic 2</span>
+    </div>
+    <ul class="mobile-nav-links">
+        <li><a href="index.html" class="mobile-nav-link">Home</a></li>
+        <li><a href="about.html" class="mobile-nav-link">About</a></li>
+        <li><a href="doctors.html" class="mobile-nav-link">Doctors</a></li>
+        <li><a href="services.html" class="mobile-nav-link">Departments</a></li>
+        <li><a href="testimonials.html" class="mobile-nav-link">Testimonials</a></li>
+        <li><a href="faq.html" class="mobile-nav-link">FAQ</a></li>
+        <li><a href="contact.html" class="mobile-nav-link">Contact</a></li>
+    </ul>
+    <span class="btn btn-primary mobile-cta btn-book">Book Appointment</span>
+</div>
+
+<main>
+    <section class="section" style="padding-top:7rem;">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Testimonials</span>
+                <h2 class="section-title">What Our <span class="text-gradient">Patients</span> Say</h2>
+                <p class="section-text">Real stories from real people who trust us with their health.</p>
+            </div>
+            <div class="tm-page-grid">
+                <div class="tm-card fade-up">
+                    <div class="tm-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><span>5.0</span></div>
+                    <p class="tm-text">"The cardiology team saved my father's life. The swift diagnosis and immediate intervention made all the difference. Forever grateful to Dr. Chen and her team."</p>
+                    <div class="tm-author">
+                        <div class="tm-avatar"><img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=80&q=80" alt="Shanthi Venkatesh" loading="lazy"></div>
+                        <div><h4>Shanthi Venkatesh</h4><span>Chennai</span></div>
+                    </div>
+                </div>
+                <div class="tm-card fade-up" data-delay="100">
+                    <div class="tm-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><span>5.0</span></div>
+                    <p class="tm-text">"Dr. Jain performed my knee replacement and I was walking pain-free in weeks. Exceptional team from the first call to the final follow-up."</p>
+                    <div class="tm-author">
+                        <div class="tm-avatar"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=80&q=80" alt="Rajesh Mudaliar" loading="lazy"></div>
+                        <div><h4>Rajesh Mudaliar</h4><span>Bangalore</span></div>
+                    </div>
+                </div>
+                <div class="tm-card fade-up" data-delay="200">
+                    <div class="tm-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><span>4.8</span></div>
+                    <p class="tm-text">"The pediatric department is incredible. My son was nervous but the doctors made him feel completely at ease. World-class care with a human touch."</p>
+                    <div class="tm-author">
+                        <div class="tm-avatar"><img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=80&q=80" alt="Lakshmi Priya" loading="lazy"></div>
+                        <div><h4>Lakshmi Priya</h4><span>Hyderabad</span></div>
+                    </div>
+                </div>
+                <div class="tm-card fade-up" data-delay="300">
+                    <div class="tm-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><span>5.0</span></div>
+                    <p class="tm-text">"I had been struggling with chronic migraines for years. Dr. Torres diagnosed the root cause in one visit. Six months later I'm pain-free. Unbelievable expertise."</p>
+                    <div class="tm-author">
+                        <div class="tm-avatar"><img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=80&q=80" alt="Arun Kumar" loading="lazy"></div>
+                        <div><h4>Arun Kumar</h4><span>Coimbatore</span></div>
+                    </div>
+                </div>
+                <div class="tm-card fade-up" data-delay="150">
+                    <div class="tm-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><span>5.0</span></div>
+                    <p class="tm-text">"The dermatology team treated my severe eczema with a combination of modern medicine and lifestyle guidance. My skin has never looked better. Highly recommend Dr. Watson."</p>
+                    <div class="tm-author">
+                        <div class="tm-avatar"><img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=80&q=80" alt="Meena Sundaram" loading="lazy"></div>
+                        <div><h4>Meena Sundaram</h4><span>Madurai</span></div>
+                    </div>
+                </div>
+                <div class="tm-card fade-up" data-delay="250">
+                    <div class="tm-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><span>5.0</span></div>
+                    <p class="tm-text">"Dr. Okonkwo repaired my torn ACL and I was back on the football field in eight months. The rehabilitation program was world-class. Truly grateful for the entire team."</p>
+                    <div class="tm-author">
+                        <div class="tm-avatar"><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=80&q=80" alt="Vikram Rajan" loading="lazy"></div>
+                        <div><h4>Vikram Rajan</h4><span>Pondicherry</span></div>
+                    </div>
+                </div>
+                <div class="tm-card fade-up" data-delay="100">
+                    <div class="tm-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><span>5.0</span></div>
+                    <p class="tm-text">"The entire maternity experience at this clinic was beautiful. Dr. Mehta and the nursing staff made us feel supported every step of the way. Our baby girl was born healthy and happy."</p>
+                    <div class="tm-author">
+                        <div class="tm-avatar"><img src="https://images.unsplash.com/photo-1548142813-c348350df52b?auto=format&fit=crop&w=80&q=80" alt="Anita Desai" loading="lazy"></div>
+                        <div><h4>Anita Desai</h4><span>Vellore</span></div>
+                    </div>
+                </div>
+                <div class="tm-card fade-up" data-delay="200">
+                    <div class="tm-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><span>5.0</span></div>
+                    <p class="tm-text">"From the warm welcome at reception to the thorough consultation with Dr. Park, every visit is a pleasure. This is how healthcare should feel — respectful, attentive, and effective."</p>
+                    <div class="tm-author">
+                        <div class="tm-avatar"><img src="https://images.unsplash.com/photo-1489424731084-a5d8b219a5bb?auto=format&fit=crop&w=80&q=80" alt="Nalini Iyer" loading="lazy"></div>
+                        <div><h4>Nalini Iyer</h4><span>Trichy</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section cta" style="padding-top:2rem;">
+        <div class="container">
+            <div class="cta-card">
+                <div class="cta-bg-pattern"><span></span><span></span><span></span></div>
+                <h2 class="cta-title">Ready to Experience the Difference?</h2>
+                <p class="cta-text">Join hundreds of satisfied patients who trust us with their health.</p>
+                <div class="cta-actions">
+                    <span class="btn btn-gold btn-lg btn-book">Book Appointment <i class="fas fa-calendar-check"></i></span>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="index.html" class="nav-logo" style="margin-bottom:1rem;">
+                    <span class="nav-logo-mark" style="width:30px;height:30px;"><svg viewBox="0 0 18 18" fill="none" width="16" height="16"><circle cx="9" cy="9" r="5" stroke="#fff" stroke-width="2" fill="none"/><path d="M9 4v10M4 9h10" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg></span>
+                    <span class="nav-logo-text">Them Demo Clinic 2</span>
+                </a>
+                <p>Thoughtful healthcare. Rooted in expertise, driven by compassion.</p>
+                <div class="footer-social">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="doctors.html">Doctors</a></li>
+                    <li><a href="services.html">Departments</a></li>
+                    <li><a href="testimonials.html">Testimonials</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Departments</h4>
+                <ul>
+                    <li><a href="services.html#cardiology">Cardiology</a></li>
+                    <li><a href="services.html#neurology">Neurology</a></li>
+                    <li><a href="services.html#pediatrics">Pediatrics</a></li>
+                    <li><a href="services.html#orthopedics">Orthopedics</a></li>
+                </ul>
+            </div>
+            <div class="footer-hours">
+                <h4>Hours</h4>
+                <ul>
+                    <li><span>Mon — Fri</span><span>8:00 AM — 8:00 PM</span></li>
+                    <li><span>Saturday</span><span>9:00 AM — 5:00 PM</span></li>
+                    <li><span>Sunday</span><span>Emergency Only</span></li>
+                </ul>
+                <span class="btn btn-primary btn-full btn-book" style="margin-top:1rem;">Book Appointment</span>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Them Demo Clinic 2. All rights reserved.</p>
+            <div class="footer-bottom-links">
+                <a href="#">Privacy</a>
+                <a href="#">Terms</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<a href="#" id="backTop" aria-label="Back to top"><i class="fas fa-arrow-up"></i></a>
+
+<script src="script.js"></script>
+</body>
+</html>
