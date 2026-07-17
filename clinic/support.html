@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Support | Aura Medical Center</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&family=Playwrite+US+Trad:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <div id="loader">
+        <div class="loader-content">
+            <div class="loader-logo">
+                <svg viewBox="0 0 80 80" fill="none">
+                    <rect x="28" y="8" width="24" height="64" rx="4" fill="#0EA5E9"/>
+                    <rect x="8" y="28" width="64" height="24" rx="4" fill="#0EA5E9"/>
+                </svg>
+            </div>
+            <div class="loader-bar"><div class="loader-fill"></div></div>
+        </div>
+    </div>
+
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
+                    <rect x="12" y="3" width="12" height="30" rx="2" fill="#0EA5E9"/>
+                    <rect x="3" y="12" width="30" height="12" rx="2" fill="#0EA5E9"/>
+                </svg>
+                <span class="logo-text">Aura<span>Med</span></span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About Us</a></li>
+                <li><a href="services.html" class="nav-link">Services</a></li>
+                <li><a href="doctors.html" class="nav-link">Doctors</a></li>
+                <li><a href="support.html" class="nav-link active">FAQs</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <div style="position:relative">
+                    <button class="translate-btn" id="translateBtn" title="Translate"><span class="translate-icon">த</span></button>
+                    <div id="google_translate_element"></div>
+                </div>
+                <a href="contact.html" class="btn btn-nav-accent">Book Appointment</a>
+                <a href="tel:+919999988888" class="btn btn-nav-accent">Emergency</a>
+                <button class="hamburger" id="hamburger" aria-label="Menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-logo">
+            <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
+                <rect x="12" y="3" width="12" height="30" rx="2" fill="#0EA5E9"/>
+                <rect x="3" y="12" width="30" height="12" rx="2" fill="#0EA5E9"/>
+            </svg>
+            <span class="logo-text">Aura<span>Med</span></span>
+        </div>
+        <ul class="mobile-nav-links">
+            <li><a href="index.html" class="mobile-nav-link">Home</a></li>
+            <li><a href="about.html" class="mobile-nav-link">About Us</a></li>
+            <li><a href="services.html" class="mobile-nav-link">Services</a></li>
+            <li><a href="doctors.html" class="mobile-nav-link">Doctors</a></li>
+            <li><a href="support.html" class="mobile-nav-link">FAQs</a></li>
+            <li><a href="contact.html" class="mobile-nav-link">Contact</a></li>
+        </ul>
+        <a href="contact.html" class="btn btn-primary btn-lg mobile-cta">Book Appointment</a>
+    </div>
+
+    <main>
+        <section class="section page-hero">
+            <div class="container">
+                <div class="page-hero-content animate-on-scroll">
+                    <span class="section-tag">Patient Support</span>
+                    <h1 class="page-hero-title">Patient Support & FAQs</h1>
+                    <p class="page-hero-subtitle">Find answers to common questions about our services, appointments, and more. We're here to help you every step of the way.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section support-section">
+            <div class="container">
+                <div class="support-grid">
+                    <div class="support-content animate-on-scroll">
+                        <div class="faq-list">
+                            <div class="faq-item active">
+                                <button class="faq-question">
+                                    <span>How do I book an appointment?</span>
+                                    <i class="fas fa-chevron-down"></i>
+                                </button>
+                                <div class="faq-answer">
+                                    <p>You can book an appointment online through our website, call us directly at +91 99999 88888, or visit the clinic in person. Walk-ins are also welcome, though prior appointments help reduce wait times.</p>
+                                </div>
+                            </div>
+                            <div class="faq-item">
+                                <button class="faq-question">
+                                    <span>What documents should I bring?</span>
+                                    <i class="fas fa-chevron-down"></i>
+                                </button>
+                                <div class="faq-answer">
+                                    <p>Please bring a valid government-issued photo ID, your insurance card (if applicable), and any previous medical records or test reports related to your visit. For first-time patients, a completed registration form helps us serve you faster.</p>
+                                </div>
+                            </div>
+                            <div class="faq-item">
+                                <button class="faq-question">
+                                    <span>Does the clinic accept insurance?</span>
+                                    <i class="fas fa-chevron-down"></i>
+                                </button>
+                                <div class="faq-answer">
+                                    <p>Yes, we accept a wide range of major insurance networks including ICICI Lombard, Star Health, Apollo Munich, and many others. Please contact our billing department to verify your specific plan coverage before your visit.</p>
+                                </div>
+                            </div>
+                            <div class="faq-item">
+                                <button class="faq-question">
+                                    <span>What are the clinic's operating hours?</span>
+                                    <i class="fas fa-chevron-down"></i>
+                                </button>
+                                <div class="faq-answer">
+                                    <p>Our clinic is open Monday through Saturday from 8:00 AM to 8:00 PM. We remain closed on Sundays. For medical emergencies, our 24/7 emergency care unit is always available — please call +91 99999 88888.</p>
+                                </div>
+                            </div>
+                            <div class="faq-item">
+                                <button class="faq-question">
+                                    <span>Can I get a second opinion?</span>
+                                    <i class="fas fa-chevron-down"></i>
+                                </button>
+                                <div class="faq-answer">
+                                    <p>Absolutely. We offer a dedicated second opinion consultation service where our specialists review your diagnosis and treatment plan. This service ensures you have complete confidence in your medical decisions.</p>
+                                </div>
+                            </div>
+                            <div class="faq-item">
+                                <button class="faq-question">
+                                    <span>Is teleconsultation available?</span>
+                                    <i class="fas fa-chevron-down"></i>
+                                </button>
+                                <div class="faq-answer">
+                                    <p>Yes, we offer secure video consultations for follow-up visits and minor concerns. Teleconsultations are available Monday to Saturday from 9:00 AM to 6:00 PM. You can book a video appointment through our website or by phone.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="support-cards animate-on-scroll" data-delay="200">
+                        <div class="support-card">
+                            <div class="support-card-icon"><i class="fas fa-ambulance"></i></div>
+                            <h3>Emergency Care</h3>
+                            <p>24/7 emergency medical services available. Call us anytime for immediate assistance.</p>
+                            <a href="tel:+919999988888" class="support-link">+91 99999 88888</a>
+                        </div>
+                        <div class="support-card">
+                            <div class="support-card-icon"><i class="fas fa-calendar-check"></i></div>
+                            <h3>Appointment Booking</h3>
+                            <p>Call or book online to schedule your visit. Walk-ins are also welcome at our clinic.</p>
+                            <a href="tel:+919999988888" class="support-link">+91 99999 88888</a>
+                        </div>
+                        <div class="support-card">
+                            <div class="support-card-icon"><i class="fas fa-truck-medical"></i></div>
+                            <h3>Ambulance Services</h3>
+                            <p>Quick response ambulance services with trained paramedics available 24/7.</p>
+                            <a href="tel:+919999988888" class="support-link">+91 99999 88888</a>
+                        </div>
+                    </div>
+                    <div style="text-align:center;margin-top:2rem">
+                        <a href="contact.html" class="btn btn-primary btn-lg">
+                            <i class="fas fa-calendar"></i> Book an Appointment
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
+                            <rect x="12" y="3" width="12" height="30" rx="2" fill="#0EA5E9"/>
+                            <rect x="3" y="12" width="30" height="12" rx="2" fill="#0EA5E9"/>
+                        </svg>
+                        <span class="logo-text">Aura<span>Med</span></span>
+                    </a>
+                    <div class="footer-contact-row">
+                        <a href="mailto:contact@auramed.center"><i class="fas fa-envelope"></i> contact@auramed.center</a>
+                        <span><i class="fas fa-map-marker-alt"></i> Chennai, India</span>
+                        <span><i class="fas fa-phone-alt"></i> +91 99999 88888</span>
+                    </div>
+                    <p>Providing compassionate, comprehensive healthcare for you and your family.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="doctors.html">Doctors</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services.html">General Medicine</a></li>
+                        <li><a href="services.html">Pediatrics</a></li>
+                        <li><a href="services.html">Cardiology</a></li>
+                        <li><a href="services.html">Orthopedics</a></li>
+                        <li><a href="services.html">Dermatology</a></li>
+                    </ul>
+                </div>
+                <div class="footer-newsletter">
+                    <h4>Book an Appointment</h4>
+                    <p>Ready to visit? Schedule your appointment online or call us today.</p>
+                    <a href="contact.html" class="btn btn-primary btn-full">
+                        <i class="fas fa-calendar"></i> Book Now
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Aura Medical Center. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <a href="index.html" class="back-to-top" id="backToTop">
+        <i class="fas fa-chevron-up"></i>
+    </a>
+
+    <script src="script.js"></script>
+    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateInit"></script>
+    <script>
+        function googleTranslateInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                includedLanguages: 'ta,en',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+                autoDisplay: false
+            }, 'google_translate_element');
+        }
+        document.getElementById('translateBtn').addEventListener('click', function() {
+            document.getElementById('google_translate_element').classList.toggle('open');
+        });
+        document.addEventListener('click', function(e) {
+            const container = document.querySelector('.nav-actions div');
+            if (container && !container.contains(e.target)) {
+                document.getElementById('google_translate_element').classList.remove('open');
+            }
+        });
+    </script>
+</body>
+</html>

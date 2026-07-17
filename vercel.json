@@ -1,0 +1,9 @@
+{
+  "version": 2,
+  "builds": [
+    { "src": "clinic/**", "use": "@vercel/static" }
+  ],
+  "routes": [
+    { "src": "/(.*)", "dest": "/clinic/$1" }
+  ]
+}

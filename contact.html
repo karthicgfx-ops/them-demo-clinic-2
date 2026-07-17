@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Bright Screen</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&family=Playwrite+US+Trad:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <div id="loader">
+        <div class="loader-content">
+            <div class="loader-logo">
+                <img src="logo.png" alt="Bright Screen">
+            </div>
+            <div class="loader-bar"><div class="loader-fill"></div></div>
+        </div>
+    </div>
+
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="logo.png" alt="Bright Screen" class="logo-img">
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About Us</a></li>
+                <li><a href="projects.html" class="nav-link">Projects</a></li>
+                <li><a href="blog.html" class="nav-link">Blog</a></li>
+                <li><a href="support.html" class="nav-link">Support</a></li>
+                <li><a href="contact.html" class="nav-link active">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <div style="position:relative">
+                    <button class="translate-btn" id="translateBtn" title="Translate"><span class="translate-icon">த</span></button>
+                    <div id="google_translate_element"></div>
+                </div>
+                <a href="contact.html" class="btn btn-nav-accent">Book a Call</a>
+                <a href="contact.html" class="btn btn-nav-accent">Get a Quote</a>
+                <button class="hamburger" id="hamburger" aria-label="Menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-logo">
+            <img src="logo.png" alt="Bright Screen" class="logo-img">
+        </div>
+        <ul class="mobile-nav-links">
+            <li><a href="index.html" class="mobile-nav-link">Home</a></li>
+            <li><a href="about.html" class="mobile-nav-link">About Us</a></li>
+            <li><a href="projects.html" class="mobile-nav-link">Projects</a></li>
+            <li><a href="blog.html" class="mobile-nav-link">Blog</a></li>
+            <li><a href="support.html" class="mobile-nav-link">Support</a></li>
+            <li><a href="contact.html" class="mobile-nav-link">Contact</a></li>
+        </ul>
+        <a href="contact.html" class="btn btn-primary btn-lg mobile-cta">Book a Call</a>
+    </div>
+
+    <main>
+        <section class="section page-hero">
+            <div class="container">
+                <div class="page-hero-content animate-on-scroll">
+                    <span class="section-tag">Contact Us</span>
+                    <h1 class="page-hero-title">Let's Create Something Amazing</h1>
+                    <p class="page-hero-subtitle">Ready to start your project? Fill out the form and we'll get back to you within 24 hours.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section contact-section">
+            <div class="container">
+                <div class="contact-grid">
+                    <div class="contact-form-wrapper animate-on-scroll">
+                        <form class="contact-form" id="contactForm">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="firstName">First Name *</label>
+                                    <input type="text" id="firstName" name="firstName" required placeholder="John">
+                                </div>
+                                <div class="form-group">
+                                    <label for="lastName">Last Name *</label>
+                                    <input type="text" id="lastName" name="lastName" required placeholder="Doe">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="email">Email Address *</label>
+                                    <input type="email" id="email" name="email" required placeholder="john@company.com">
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone">Phone Number</label>
+                                    <input type="tel" id="phone" name="phone" placeholder="+1 (555) 000-0000">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="service">Service Interested In *</label>
+                                <select id="service" name="service" required>
+                                    <option value="" disabled selected>Select a service</option>
+                                    <option value="tshirts">Custom T-Shirts</option>
+                                    <option value="hoodies">Hoodies & Sweatshirts</option>
+                                    <option value="polo">Polo Shirts</option>
+                                    <option value="caps">Caps & Hats</option>
+                                    <option value="bags">Bags & Totes</option>
+                                    <option value="merchandise">Full Merchandise Line</option>
+                                    <option value="corporate">Corporate Apparel</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="quantity">Estimated Quantity</label>
+                                    <input type="number" id="quantity" name="quantity" min="1" placeholder="e.g. 100">
+                                </div>
+                                <div class="form-group">
+                                    <label for="budget">Budget Range</label>
+                                    <select id="budget" name="budget">
+                                        <option value="" disabled selected>Select budget</option>
+                                        <option value="10k-15k">₹10,000 - ₹15,000</option>
+                                        <option value="15k-20k">₹15,000 - ₹20,000</option>
+                                        <option value="20k-25k">₹20,000 - ₹25,000</option>
+                                        <option value="25k-30k">₹25,000 - ₹30,000</option>
+                                        <option value="30k">₹30,000+</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Project Details *</label>
+                                <textarea id="message" name="message" rows="5" required placeholder="Tell us about your project, design preferences, timeline, etc."></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-lg btn-full">
+                                <span>Send Message</span>
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </form>
+                    </div>
+                    <div class="contact-info animate-on-scroll" data-delay="200">
+                        <div class="contact-calendar">
+                            <div class="contact-details-bar">
+                                <div class="contact-detail-item">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span>Plot No 6A, Thanathavam Main Rd, Madurai-16</span>
+                                </div>
+                                <div class="contact-detail-item">
+                                    <i class="fas fa-envelope"></i>
+                                    <span>brightscreen.prints@gmail.com</span>
+                                </div>
+                                <div class="contact-detail-item">
+                                    <i class="fas fa-phone-alt"></i>
+                                    <span>94421 23828</span>
+                                </div>
+                            </div>
+                            <iframe src="https://cal.com/brightscreen.prints/15min?embed=true"
+                                    style="width:100%;height:650px;border:none;border-radius:var(--radius)"
+                                    title="Schedule a Call"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="map-section">
+            <div class="map-container">
+                <iframe src="https://maps.google.com/maps?q=Plot+No+6A+Thanathavam+Main+Rd+Madurai+625016&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                        width="100%" height="320" style="border:none" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <img src="logo.png" alt="Bright Screen" class="logo-img">
+                    </a>
+                    <div class="footer-contact-row">
+                        <a href="mailto:brightscreen.prints@gmail.com"><i class="fas fa-envelope"></i> brightscreen.prints@gmail.com</a>
+                        <span><i class="fas fa-map-marker-alt"></i> Madurai-16</span>
+                        <span><i class="fas fa-phone-alt"></i> 94421 23828</span>
+                    </div>
+                    <p>Premium screen printing services that bring your vision to life.</p>
+                    <div class="footer-social">
+                        <a href="https://www.facebook.com/profile.php?id=61592078875544" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/brightscreen.prints/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="contact.html">Custom Apparel</a></li>
+                        <li><a href="contact.html">Design Services</a></li>
+                        <li><a href="contact.html">Bulk Orders</a></li>
+                        <li><a href="contact.html">Merchandise</a></li>
+                        <li><a href="contact.html">Eco Printing</a></li>
+                    </ul>
+                </div>
+                <div class="footer-newsletter">
+                    <h4>Book a Call</h4>
+                    <p>Ready to start? Schedule a free 15-minute consultation.</p>
+                    <a href="https://cal.com/brightscreen.prints/15min" target="_blank" class="btn btn-primary btn-full">
+                        <i class="fas fa-calendar"></i> Book Now
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Bright Screen Printing. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <a href="index.html" class="back-to-top" id="backToTop">
+        <i class="fas fa-chevron-up"></i>
+    </a>
+
+    <script src="script.js"></script>
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const f = this.elements;
+            const name = (f.firstName.value + ' ' + f.lastName.value).trim();
+            const email = f.email.value;
+            const phone = f.phone.value;
+            const service = f.service.options[f.service.selectedIndex]?.text || '';
+            const quantity = f.quantity.value;
+            const budget = f.budget.options[f.budget.selectedIndex]?.text || '';
+            const message = f.message.value;
+
+            const text = `Hi Bright Screen!%0A%0A` +
+                `Name: ${name}%0A` +
+                `Email: ${email}%0A` +
+                (phone ? `Phone: ${phone}%0A` : '') +
+                `Service: ${service}%0A` +
+                (quantity ? `Quantity: ${quantity}%0A` : '') +
+                (budget ? `Budget: ${budget}%0A` : '') +
+                `%0AMessage: ${message}`;
+
+            window.open(`https://wa.me/919442123828?text=${text}`, '_blank');
+        });
+    </script>
+    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateInit"></script>
+    <script>
+        function googleTranslateInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                includedLanguages: 'ta,en',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+                autoDisplay: false
+            }, 'google_translate_element');
+        }
+        document.getElementById('translateBtn').addEventListener('click', function() {
+            document.getElementById('google_translate_element').classList.toggle('open');
+        });
+        document.addEventListener('click', function(e) {
+            const container = document.querySelector('.nav-actions div');
+            if (container && !container.contains(e.target)) {
+                document.getElementById('google_translate_element').classList.remove('open');
+            }
+        });
+    </script>
+</body>
+</html>

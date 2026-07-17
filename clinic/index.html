@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THEM Demo Clinic 2</title>
+    <meta name="description" content="THEM Demo Clinic 2">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div id="scroll-progress"></div>
+
+<div id="loader">
+    <div class="loader-ring"></div>
+    <div class="loader-text">THEM</div>
+</div>
+
+<nav class="navbar" id="navbar">
+    <div class="container">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-logo">
+                <span class="nav-logo-mark">
+                    <svg viewBox="0 0 18 18" fill="none">
+                        <circle cx="9" cy="9" r="5" stroke="#fff" stroke-width="2" fill="none"/>
+                        <path d="M9 4v10M4 9h10" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </span>
+                <span class="nav-logo-text">THEM</span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html" class="nav-link active">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="services.html" class="nav-link">Departments</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="contact.html" class="btn btn-primary btn-sm">Book Now</a>
+                <button class="hamburger" id="hamburger" aria-label="Menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<div class="mobile-overlay" id="mobileOverlay"></div>
+<div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu-header">
+        <span class="nav-logo-mark" style="width:28px;height:28px;">
+            <svg viewBox="0 0 18 18" fill="none" width="16" height="16">
+                <circle cx="9" cy="9" r="5" stroke="#fff" stroke-width="2" fill="none"/>
+                <path d="M9 4v10M4 9h10" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+        </span>
+        <span class="nav-logo-text">THEM</span>
+    </div>
+    <ul class="mobile-nav-links">
+        <li><a href="index.html" class="mobile-nav-link">Home</a></li>
+        <li><a href="about.html" class="mobile-nav-link">About</a></li>
+        <li><a href="services.html" class="mobile-nav-link">Departments</a></li>
+        <li><a href="contact.html" class="mobile-nav-link">Contact</a></li>
+    </ul>
+    <a href="contact.html" class="btn btn-primary mobile-cta">Book Appointment</a>
+</div>
+
+<main>
+    <section class="hero" id="home">
+        <div class="hero-bg">
+            <div class="hero-mesh"></div>
+            <div class="hero-ornament hero-ornament-1"></div>
+            <div class="hero-ornament hero-ornament-2"></div>
+            <div class="hero-ornament hero-ornament-3"></div>
+            <div class="hero-ornament hero-ornament-4"></div>
+            <div class="hero-wave"></div>
+        </div>
+        <div class="container">
+            <div class="hero-grid">
+                <div class="hero-content">
+                    <div class="hero-badge">Since 2004 — Your Health, Our Purpose</div>
+                    <h1 class="hero-title">
+                        Care That<br>
+                        <span class="text-gradient">Matters Most</span>
+                    </h1>
+                    <p class="hero-text">
+                        A place where expertise meets empathy. 50+ specialists, advanced technology, and a commitment to treating every patient like family.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="contact.html" class="btn btn-primary btn-lg pulse-btn">
+                            Book Appointment <i class="fas fa-calendar-check"></i>
+                        </a>
+                    </div>
+                    <div class="hero-trust">
+                        <div class="hero-avatars">
+                            <span class="hero-avatar">A</span>
+                            <span class="hero-avatar">M</span>
+                            <span class="hero-avatar">K</span>
+                            <span class="hero-avatar">R</span>
+                            <span class="hero-avatar hero-avatar-more">+</span>
+                        </div>
+                        <div class="hero-trust-text">
+                            <div class="hero-stars">★★★★★ <span>4.9</span></div>
+                            <span>Trusted by 15,000+ patients</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="hero-card">
+                        <div class="hero-card-header">
+                            <span class="nav-logo-mark" style="width:34px;height:34px;">
+                                <svg viewBox="0 0 18 18" fill="none" width="18" height="18">
+                                    <circle cx="9" cy="9" r="5" stroke="#fff" stroke-width="2" fill="none"/>
+                                    <path d="M9 4v10M4 9h10" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+                                </svg>
+                            </span>
+                            <div>
+                                <h3>THEM Demo Clinic 2</h3>
+                                <p>Thoughtful healthcare</p>
+                            </div>
+                        </div>
+                        <div class="hero-stats-grid">
+                            <div class="hero-stat">
+                                <div class="hero-stat-num" data-target="50" data-suffix="+">0</div>
+                                <div class="hero-stat-label">Specialists</div>
+                            </div>
+                            <div class="hero-stat">
+                                <div class="hero-stat-num" data-target="20" data-suffix="+">0</div>
+                                <div class="hero-stat-label">Years</div>
+                            </div>
+                            <div class="hero-stat">
+                                <div class="hero-stat-num" data-target="98" data-suffix="%">0</div>
+                                <div class="hero-stat-label">Satisfaction</div>
+                            </div>
+                            <div class="hero-stat">
+                                <div class="hero-stat-num" data-target="15" data-suffix="K+">0</div>
+                                <div class="hero-stat-label">Patients</div>
+                            </div>
+                        </div>
+                        <div class="hero-card-badge">
+                            <i class="fas fa-certificate"></i> NABH · ISO · Accredited
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="brands">
+        <div class="container">
+            <div class="brands-inner">
+                <span class="brands-label">Trusted By</span>
+                <span class="brand-logo">Apollo</span>
+                <span class="brand-logo">Fortis</span>
+                <span class="brand-logo">Max Care</span>
+                <span class="brand-logo">Cigna</span>
+                <span class="brand-logo">MediAssist</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="section services" id="services">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Our Departments</span>
+                <h2 class="section-title">Every <span class="text-gradient">Specialty</span>, One Home</h2>
+                <p class="section-text">From cardiology to pediatrics — expert care across every major medical field.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card fade-up">
+                    <div class="service-icon" style="--icon-color:#146B6B;"><i class="fas fa-heart"></i></div>
+                    <h3>Cardiology</h3>
+                    <p>Advanced heart care with state-of-the-art diagnostics and minimally invasive procedures.</p>
+                    <a href="services.html#cardiology" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card fade-up" data-delay="100">
+                    <div class="service-icon" style="--icon-color:#C59849;"><i class="fas fa-brain"></i></div>
+                    <h3>Neurology</h3>
+                    <p>Comprehensive care for brain, spine, and nervous system with advanced imaging.</p>
+                    <a href="services.html#neurology" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card fade-up" data-delay="200">
+                    <div class="service-icon" style="--icon-color:#146B6B;"><i class="fas fa-child"></i></div>
+                    <h3>Pediatrics</h3>
+                    <p>Gentle, specialized care for children in a warm, child-friendly environment.</p>
+                    <a href="services.html#pediatrics" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card fade-up" data-delay="300">
+                    <div class="service-icon" style="--icon-color:#C59849;"><i class="fas fa-bone"></i></div>
+                    <h3>Orthopedics</h3>
+                    <p>Expert bone, joint, and muscle care from sports medicine to joint replacement.</p>
+                    <a href="services.html#orthopedics" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card fade-up" data-delay="400">
+                    <div class="service-icon" style="--icon-color:#146B6B;"><i class="fas fa-hand"></i></div>
+                    <h3>Dermatology</h3>
+                    <p>Complete skin health with advanced laser treatments and cosmetic dermatology.</p>
+                    <a href="services.html#dermatology" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="service-card fade-up" data-delay="500">
+                    <div class="service-icon" style="--icon-color:#C59849;"><i class="fas fa-tooth"></i></div>
+                    <h3>Dental Care</h3>
+                    <p>Full-service dentistry from routine cleanings to advanced oral surgery.</p>
+                    <a href="services.html#dental" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card fade-up">
+                    <div class="stat-icon"><i class="fas fa-user-md"></i></div>
+                    <div class="stat-num" data-target="50" data-suffix="+">0</div>
+                    <div class="stat-label">Expert Doctors</div>
+                </div>
+                <div class="stat-card fade-up" data-delay="100">
+                    <div class="stat-icon"><i class="fas fa-calendar-check"></i></div>
+                    <div class="stat-num" data-target="15000" data-suffix="+">0</div>
+                    <div class="stat-label">Patients Treated</div>
+                </div>
+                <div class="stat-card fade-up" data-delay="200">
+                    <div class="stat-icon"><i class="fas fa-procedures"></i></div>
+                    <div class="stat-num" data-target="20" data-suffix="+">0</div>
+                    <div class="stat-label">Years Experience</div>
+                </div>
+                <div class="stat-card fade-up" data-delay="300">
+                    <div class="stat-icon"><i class="fas fa-award"></i></div>
+                    <div class="stat-num" data-target="99" data-suffix="%">0</div>
+                    <div class="stat-label">Satisfaction</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section about" id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-visual fade-left">
+                    <div class="about-image-main">
+                        <img src="https://images.unsplash.com/photo-1551076805-e1869033e561?auto=format&fit=crop&w=600&q=80" alt="THEM Demo Clinic 2 building" loading="lazy">
+                    </div>
+                    <div class="about-image-stack">
+                        <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=300&q=80" alt="Doctor" loading="lazy">
+                        <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=300&q=80" alt="Medical care" loading="lazy">
+                    </div>
+                </div>
+                <div class="about-content fade-right">
+                    <span class="section-tag">About THEM</span>
+                    <h2 class="section-title left">Rooted in <span class="text-gradient">Care</span>, Driven by Purpose</h2>
+                    <p class="about-text">THEM Demo Clinic 2 was built on a simple belief — that exceptional healthcare starts with listening. For over two decades, we've cultivated a team of specialists who share this philosophy, creating a space where advanced medicine meets genuine compassion.</p>
+                    <div class="about-features">
+                        <div class="about-feature"><i class="fas fa-check-circle"></i><span>NABH Accredited</span></div>
+                        <div class="about-feature"><i class="fas fa-check-circle"></i><span>24/7 Emergency Care</span></div>
+                        <div class="about-feature"><i class="fas fa-check-circle"></i><span>Insurance Accepted</span></div>
+                        <div class="about-feature"><i class="fas fa-check-circle"></i><span>Digital Records</span></div>
+                    </div>
+                    <a href="about.html" class="btn btn-primary">Our Story <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section process">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Patient Journey</span>
+                <h2 class="section-title">Care, <span class="text-gradient">Step by Step</span></h2>
+                <p class="section-text">From your first visit to full recovery — a seamless experience designed around you.</p>
+            </div>
+            <div class="process-grid">
+                <div class="process-card fade-up">
+                    <span class="process-num">01</span>
+                    <h3>Book Appointment</h3>
+                    <p>Schedule online in minutes. Choose your preferred doctor, department, and time slot.</p>
+                </div>
+                <div class="process-card fade-up" data-delay="100">
+                    <span class="process-num">02</span>
+                    <h3>Consultation</h3>
+                    <p>Meet your specialist in a calm, private setting. We listen first, then diagnose with precision.</p>
+                </div>
+                <div class="process-card fade-up" data-delay="200">
+                    <span class="process-num">03</span>
+                    <h3>Diagnosis & Treatment</h3>
+                    <p>A clear, personalized plan built on accurate diagnosis and the latest medical evidence.</p>
+                </div>
+                <div class="process-card fade-up" data-delay="300">
+                    <span class="process-num">04</span>
+                    <h3>Follow-Up & Recovery</h3>
+                    <p>Ongoing support and monitoring to ensure you heal fully and stay healthy long-term.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section why-us">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Why THEM</span>
+                <h2 class="section-title">The <span class="text-gradient">THEM</span> Difference</h2>
+            </div>
+            <div class="why-grid">
+                <div class="why-card fade-up">
+                    <div class="why-icon"><i class="fas fa-user-md"></i></div>
+                    <h3>Elite Specialists</h3>
+                    <p>50+ doctors at the top of their fields, each with decades of focused experience.</p>
+                </div>
+                <div class="why-card fade-up" data-delay="100">
+                    <div class="why-icon"><i class="fas fa-microscope"></i></div>
+                    <h3>Advanced Technology</h3>
+                    <p>Cutting-edge diagnostics and treatment equipment for the most accurate care.</p>
+                </div>
+                <div class="why-card fade-up" data-delay="200">
+                    <div class="why-icon"><i class="fas fa-clock"></i></div>
+                    <h3>Always Available</h3>
+                    <p>Round-the-clock emergency services and inpatient care — we're always here.</p>
+                </div>
+                <div class="why-card fade-up" data-delay="300">
+                    <div class="why-icon"><i class="fas fa-hand-holding-usd"></i></div>
+                    <h3>Transparent Pricing</h3>
+                    <p>Premium care with clear, fair pricing and full insurance support.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section doctors">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Our Team</span>
+                <h2 class="section-title">Meet Your <span class="text-gradient">Doctors</span></h2>
+            </div>
+            <div class="doctors-grid">
+                <div class="doctor-card fade-up">
+                    <div class="doctor-avatar" style="background:linear-gradient(135deg,#146B6B,#0D5252);"><img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=150&q=80" alt="Dr. David Kumar" loading="lazy"></div>
+                    <h3>Dr. David Kumar</h3>
+                    <span class="doctor-spec">Cardiologist</span>
+                    <p>MBBS, MD, DM — 18 yrs</p>
+                    <a href="contact.html" class="btn btn-outline btn-sm">Book</a>
+                </div>
+                <div class="doctor-card fade-up" data-delay="100">
+                    <div class="doctor-avatar" style="background:linear-gradient(135deg,#C59849,#B8893E);"><img src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?auto=format&fit=crop&w=150&q=80" alt="Dr. Sarah Priya" loading="lazy"></div>
+                    <h3>Dr. Sarah Priya</h3>
+                    <span class="doctor-spec">Neurologist</span>
+                    <p>MBBS, MD, DM — 15 yrs</p>
+                    <a href="contact.html" class="btn btn-outline btn-sm">Book</a>
+                </div>
+                <div class="doctor-card fade-up" data-delay="200">
+                    <div class="doctor-avatar" style="background:linear-gradient(135deg,#146B6B,#0D5252);"><img src="https://images.unsplash.com/photo-1537368910025-700350fe46c7?auto=format&fit=crop&w=150&q=80" alt="Dr. Rajesh Jain" loading="lazy"></div>
+                    <h3>Dr. Rajesh Jain</h3>
+                    <span class="doctor-spec">Orthopedic Surgeon</span>
+                    <p>MBBS, MS, MCh — 20 yrs</p>
+                    <a href="contact.html" class="btn btn-outline btn-sm">Book</a>
+                </div>
+                <div class="doctor-card fade-up" data-delay="300">
+                    <div class="doctor-avatar" style="background:linear-gradient(135deg,#C59849,#B8893E);"><img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=150&q=80" alt="Dr. Anita Lakshmi" loading="lazy"></div>
+                    <h3>Dr. Anita Lakshmi</h3>
+                    <span class="doctor-spec">Pediatrician</span>
+                    <p>MBBS, MD — 12 yrs</p>
+                    <a href="contact.html" class="btn btn-outline btn-sm">Book</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section testimonials">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Testimonials</span>
+                <h2 class="section-title">What Our <span class="text-gradient">Patients</span> Say</h2>
+            </div>
+            <div class="testimonials-slider fade-up">
+                <div class="testimonial-track" id="testimonialTrack">
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <span>5.0</span>
+                        </div>
+                        <p class="testimonial-text">"The cardiology team at THEM saved my father's life. The swift diagnosis and immediate intervention made all the difference. Forever grateful."</p>
+                        <div class="testimonial-author">
+                            <div class="ta-avatar" style="background:linear-gradient(135deg,#146B6B,#0D5252);"><img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=80&q=80" alt="Shanthi Venkatesh" loading="lazy"></div>
+                            <div><h4>Shanthi Venkatesh</h4></div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <span>5.0</span>
+                        </div>
+                        <p class="testimonial-text">"Dr. Jain performed my knee replacement and I was walking pain-free in weeks. Exceptional team, from the first call to the final follow-up."</p>
+                        <div class="testimonial-author">
+                            <div class="ta-avatar" style="background:linear-gradient(135deg,#C59849,#B8893E);"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=80&q=80" alt="Rajesh Mudaliar" loading="lazy"></div>
+                            <div><h4>Rajesh Mudaliar</h4></div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                            <span>4.8</span>
+                        </div>
+                        <p class="testimonial-text">"The pediatric department is incredible. My son was nervous, but the doctors made him feel completely at ease. World-class care with a human touch."</p>
+                        <div class="testimonial-author">
+                            <div class="ta-avatar" style="background:linear-gradient(135deg,#146B6B,#0D5252);"><img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=80&q=80" alt="Lakshmi Priya" loading="lazy"></div>
+                            <div><h4>Lakshmi Priya</h4></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-controls">
+                    <button class="tl-btn" id="prevT"><i class="fas fa-chevron-left"></i></button>
+                    <div class="tl-dots" id="tlDots"></div>
+                    <button class="tl-btn" id="nextT"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section cta">
+        <div class="container">
+            <div class="cta-card">
+                <div class="cta-bg-pattern">
+                    <span></span><span></span><span></span>
+                </div>
+                <h2 class="cta-title">Your Health Is Our Purpose</h2>
+                <p class="cta-text">Experience care that puts you first. Book your appointment today.</p>
+                <div class="cta-actions">
+                    <a href="contact.html" class="btn btn-gold btn-lg">Book Appointment <i class="fas fa-calendar-check"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="index.html" class="nav-logo" style="margin-bottom:1rem;">
+                    <span class="nav-logo-mark" style="width:30px;height:30px;">
+                        <svg viewBox="0 0 18 18" fill="none" width="16" height="16">
+                            <circle cx="9" cy="9" r="5" stroke="#fff" stroke-width="2" fill="none"/>
+                            <path d="M9 4v10M4 9h10" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </span>
+                    <span class="nav-logo-text">THEM</span>
+                </a>
+                <p>Thoughtful healthcare. Rooted in expertise, driven by compassion.</p>
+                <div class="footer-social">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Departments</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Departments</h4>
+                <ul>
+                    <li><a href="services.html#cardiology">Cardiology</a></li>
+                    <li><a href="services.html#neurology">Neurology</a></li>
+                    <li><a href="services.html#pediatrics">Pediatrics</a></li>
+                    <li><a href="services.html#orthopedics">Orthopedics</a></li>
+                </ul>
+            </div>
+            <div class="footer-hours">
+                <h4>Hours</h4>
+                <ul>
+                    <li><span>Mon — Fri</span><span>8:00 AM — 8:00 PM</span></li>
+                    <li><span>Saturday</span><span>9:00 AM — 5:00 PM</span></li>
+                    <li><span>Sunday</span><span>Emergency Only</span></li>
+                </ul>
+                <a href="contact.html" class="btn btn-primary btn-full" style="margin-top:1rem;">Book Appointment</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 THEM Demo Clinic 2. All rights reserved.</p>
+            <div class="footer-bottom-links">
+                <a href="#">Privacy</a>
+                <a href="#">Terms</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<button class="back-top" id="backTop">
+    <i class="fas fa-chevron-up"></i>
+</button>
+
+<script src="script.js"></script>
+</body>
+</html>

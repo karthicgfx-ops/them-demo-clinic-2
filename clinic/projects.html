@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Departments | Aura Medical Center</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&family=Playwrite+US+Trad:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <div id="loader">
+        <div class="loader-content">
+            <div class="loader-logo">
+                <svg viewBox="0 0 80 80" fill="none">
+                    <rect x="28" y="8" width="24" height="64" rx="4" fill="#0EA5E9"/>
+                    <rect x="8" y="28" width="64" height="24" rx="4" fill="#0EA5E9"/>
+                </svg>
+            </div>
+            <div class="loader-bar"><div class="loader-fill"></div></div>
+        </div>
+    </div>
+
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
+                    <rect x="12" y="3" width="12" height="30" rx="2" fill="#0EA5E9"/>
+                    <rect x="3" y="12" width="30" height="12" rx="2" fill="#0EA5E9"/>
+                </svg>
+                <span class="logo-text">Aura<span>Med</span></span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About Us</a></li>
+                <li><a href="projects.html" class="nav-link active">Departments</a></li>
+                <li><a href="blog.html" class="nav-link">Blog</a></li>
+                <li><a href="support.html" class="nav-link">Support</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <div style="position:relative">
+                    <button class="translate-btn" id="translateBtn" title="Translate"><span class="translate-icon">த</span></button>
+                    <div id="google_translate_element"></div>
+                </div>
+                <a href="contact.html" class="btn btn-nav-accent">Book Appointment</a>
+                <a href="contact.html" class="btn btn-nav-accent">Emergency Care</a>
+                <button class="hamburger" id="hamburger" aria-label="Menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-logo">
+            <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
+                <rect x="12" y="3" width="12" height="30" rx="2" fill="#0EA5E9"/>
+                <rect x="3" y="12" width="30" height="12" rx="2" fill="#0EA5E9"/>
+            </svg>
+            <span class="logo-text">Aura<span>Med</span></span>
+        </div>
+        <ul class="mobile-nav-links">
+            <li><a href="index.html" class="mobile-nav-link">Home</a></li>
+            <li><a href="about.html" class="mobile-nav-link">About Us</a></li>
+            <li><a href="projects.html" class="mobile-nav-link">Departments</a></li>
+            <li><a href="blog.html" class="mobile-nav-link">Blog</a></li>
+            <li><a href="support.html" class="mobile-nav-link">Support</a></li>
+            <li><a href="contact.html" class="mobile-nav-link">Contact</a></li>
+        </ul>
+        <a href="contact.html" class="btn btn-primary btn-lg mobile-cta">Book Appointment</a>
+    </div>
+
+    <main>
+        <section class="section page-hero">
+            <div class="container">
+                <div class="page-hero-content animate-on-scroll">
+                    <span class="section-tag">Our Departments</span>
+                    <h1 class="page-hero-title">Our Departments & Services</h1>
+                    <p class="page-hero-subtitle">Comprehensive medical care delivered by experienced specialists in a compassionate, patient-centered environment.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section projects-section">
+            <div class="container">
+                <div class="project-filters animate-on-scroll">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="cardiology">Cardiology</button>
+                    <button class="filter-btn" data-filter="neurology">Neurology</button>
+                    <button class="filter-btn" data-filter="orthopedics">Orthopedics</button>
+                    <button class="filter-btn" data-filter="pediatrics">Pediatrics</button>
+                </div>
+                <div class="projects-grid">
+                    <div class="project-card animate-on-scroll" data-category="cardiology" data-delay="0">
+                        <div class="project-image">
+                            <div class="project-placeholder" style="background: linear-gradient(135deg, #8B0000, #DC143C);">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <div class="project-overlay">
+                                <a href="contact.html" class="btn btn-white">Book Appointment</a>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <span class="project-category">Cardiology</span>
+                            <h3>Heart Care</h3>
+                            <p>Advanced cardiac diagnostics and interventions</p>
+                        </div>
+                    </div>
+                    <div class="project-card animate-on-scroll" data-category="neurology" data-delay="100">
+                        <div class="project-image">
+                            <div class="project-placeholder" style="background: linear-gradient(135deg, #1A237E, #3F51B5);">
+                                <i class="fas fa-brain"></i>
+                            </div>
+                            <div class="project-overlay">
+                                <a href="contact.html" class="btn btn-white">Book Appointment</a>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <span class="project-category">Neurology</span>
+                            <h3>Brain & Spine</h3>
+                            <p>Expert neurological care and treatments</p>
+                        </div>
+                    </div>
+                    <div class="project-card animate-on-scroll" data-category="orthopedics" data-delay="200">
+                        <div class="project-image">
+                            <div class="project-placeholder" style="background: linear-gradient(135deg, #4A148C, #7B1FA2);">
+                                <i class="fas fa-bone"></i>
+                            </div>
+                            <div class="project-overlay">
+                                <a href="contact.html" class="btn btn-white">Book Appointment</a>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <span class="project-category">Orthopedics</span>
+                            <h3>Bone & Joint</h3>
+                            <p>Joint replacement and sports medicine</p>
+                        </div>
+                    </div>
+                    <div class="project-card animate-on-scroll" data-category="pediatrics" data-delay="300">
+                        <div class="project-image">
+                            <div class="project-placeholder" style="background: linear-gradient(135deg, #00695C, #26A69A);">
+                                <i class="fas fa-child"></i>
+                            </div>
+                            <div class="project-overlay">
+                                <a href="contact.html" class="btn btn-white">Book Appointment</a>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <span class="project-category">Pediatrics</span>
+                            <h3>Child Care</h3>
+                            <p>Compassionate care for children</p>
+                        </div>
+                    </div>
+                    <div class="project-card animate-on-scroll" data-category="dermatology" data-delay="400">
+                        <div class="project-image">
+                            <div class="project-placeholder" style="background: linear-gradient(135deg, #4E342E, #8D6E63);">
+                                <i class="fas fa-hand-holding-heart"></i>
+                            </div>
+                            <div class="project-overlay">
+                                <a href="contact.html" class="btn btn-white">Book Appointment</a>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <span class="project-category">Dermatology</span>
+                            <h3>Skin Care</h3>
+                            <p>Medical and cosmetic dermatology</p>
+                        </div>
+                    </div>
+                    <div class="project-card animate-on-scroll" data-category="dental" data-delay="500">
+                        <div class="project-image">
+                            <div class="project-placeholder" style="background: linear-gradient(135deg, #01579B, #0288D1);">
+                                <i class="fas fa-tooth"></i>
+                            </div>
+                            <div class="project-overlay">
+                                <a href="contact.html" class="btn btn-white">Book Appointment</a>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <span class="project-category">Dental Care</span>
+                            <h3>Oral Health</h3>
+                            <p>Complete dental services</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="projects-cta animate-on-scroll">
+                    <a href="contact.html" class="btn btn-primary btn-lg">
+                        Book an Appointment <i class="fas fa-calendar-check"></i>
+                    </a>
+                    <a href="tel:+911234567890" class="btn btn-outline btn-lg" style="margin-left:0.75rem">
+                        <i class="fas fa-phone-alt"></i> Call Emergency
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
+                            <rect x="12" y="3" width="12" height="30" rx="2" fill="#0EA5E9"/>
+                            <rect x="3" y="12" width="30" height="12" rx="2" fill="#0EA5E9"/>
+                        </svg>
+                        <span class="logo-text">Aura<span>Med</span></span>
+                    </a>
+                    <div class="footer-contact-row">
+                        <a href="mailto:info@auramed.center"><i class="fas fa-envelope"></i> info@auramed.center</a>
+                        <span><i class="fas fa-map-marker-alt"></i> Chennai-16</span>
+                        <span><i class="fas fa-phone-alt"></i> 044 2345 6789</span>
+                    </div>
+                    <p>Comprehensive medical care with compassion and excellence.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="projects.html">Departments</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="contact.html">Cardiology</a></li>
+                        <li><a href="contact.html">Neurology</a></li>
+                        <li><a href="contact.html">Orthopedics</a></li>
+                        <li><a href="contact.html">Pediatrics</a></li>
+                        <li><a href="contact.html">Dental Care</a></li>
+                    </ul>
+                </div>
+                <div class="footer-newsletter">
+                    <h4>Emergency Care</h4>
+                    <p>24/7 emergency services available. Call us anytime for immediate assistance.</p>
+                    <a href="tel:+911234567890" class="btn btn-primary btn-full">
+                        <i class="fas fa-phone-alt"></i> Call Now
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Aura Medical Center. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <a href="index.html" class="back-to-top" id="backToTop">
+        <i class="fas fa-chevron-up"></i>
+    </a>
+
+    <script src="script.js"></script>
+    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateInit"></script>
+    <script>
+        function googleTranslateInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                includedLanguages: 'ta,en',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+                autoDisplay: false
+            }, 'google_translate_element');
+        }
+        document.getElementById('translateBtn').addEventListener('click', function() {
+            document.getElementById('google_translate_element').classList.toggle('open');
+        });
+        document.addEventListener('click', function(e) {
+            const container = document.querySelector('.nav-actions div');
+            if (container && !container.contains(e.target)) {
+                document.getElementById('google_translate_element').classList.remove('open');
+            }
+        });
+    </script>
+</body>
+</html>
