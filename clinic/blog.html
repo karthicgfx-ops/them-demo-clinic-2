@@ -3,211 +3,245 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog | Aura Medical Center</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" type="image/png" href="logo.png">
+    <title>Blog | Them Demo Clinic 2</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&family=Playwrite+US+Trad:wght@400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
     <link href="https://app.cal.com/embed.css" rel="stylesheet">
     <script type="text/javascript" src="https://app.cal.com/embed.js"></script>
 </head>
 <body>
-    <div id="loader">
-        <div class="loader-content">
-            <div class="loader-logo">
-                <svg viewBox="0 0 80 80" fill="none"><rect x="28" y="8" width="24" height="64" rx="4" fill="#0EA5E9"/><rect x="8" y="28" width="64" height="24" rx="4" fill="#0EA5E9"/></svg>
-            </div>
-            <div class="loader-bar"><div class="loader-fill"></div></div>
-        </div>
-    </div>
 
-    <nav id="navbar">
-        <div class="nav-container">
-            <a href="index.html" class="logo">
-                <svg width="36" height="36" viewBox="0 0 36 36" fill="none"><rect x="12" y="3" width="12" height="30" rx="2" fill="#0EA5E9"/><rect x="3" y="12" width="30" height="12" rx="2" fill="#0EA5E9"/></svg>
-                <span class="logo-text">Aura<span>Med</span></span>
+<div id="scroll-progress"></div>
+
+<div id="loader"><div class="loader-ring"></div><div class="loader-text">Them Demo Clinic 2</div></div>
+
+<nav class="navbar" id="navbar">
+    <div class="container">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-logo">
+                <span class="nav-logo-mark"><svg viewBox="0 0 18 18" fill="none"><circle cx="9" cy="9" r="5" stroke="#fff" stroke-width="2" fill="none"/><path d="M9 4v10M4 9h10" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg></span>
+                <span class="nav-logo-text">Them Demo Clinic 2</span>
             </a>
             <ul class="nav-links" id="navLinks">
                 <li><a href="index.html" class="nav-link">Home</a></li>
-                <li><a href="about.html" class="nav-link">About Us</a></li>
-                <li><a href="services.html" class="nav-link">Services</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="doctors.html" class="nav-link">Doctors</a></li>
+                <li><a href="services.html" class="nav-link">Departments</a></li>
+                <li><a href="testimonials.html" class="nav-link">Testimonials</a></li>
+                <li><a href="faq.html" class="nav-link">FAQ</a></li>
+                <li><a href="insurance.html" class="nav-link">Insurance</a></li>
                 <li><a href="blog.html" class="nav-link active">Blog</a></li>
                 <li><a href="contact.html" class="nav-link">Contact</a></li>
             </ul>
             <div class="nav-actions">
-                <div style="position:relative">
-                    <button class="translate-btn" id="translateBtn" title="Translate"><span class="translate-icon">த</span></button>
-                    <div id="google_translate_element"></div>
-                </div>
-                <a href="https://cal.com/themdemosites/30min" class="btn btn-nav-accent">Book Appointment</a>
+                <span class="btn btn-primary btn-sm btn-book">Book Now</span>
                 <button class="hamburger" id="hamburger" aria-label="Menu">
                     <span></span><span></span><span></span>
                 </button>
             </div>
         </div>
-    </nav>
-
-    <div class="mobile-menu" id="mobileMenu">
-        <div class="mobile-logo">
-            <svg width="36" height="36" viewBox="0 0 36 36" fill="none"><rect x="12" y="3" width="12" height="30" rx="2" fill="#0EA5E9"/><rect x="3" y="12" width="30" height="12" rx="2" fill="#0EA5E9"/></svg>
-            <span class="logo-text">Aura<span>Med</span></span>
-        </div>
-        <ul class="mobile-nav-links">
-            <li><a href="index.html" class="mobile-nav-link">Home</a></li>
-            <li><a href="about.html" class="mobile-nav-link">About Us</a></li>
-            <li><a href="services.html" class="mobile-nav-link">Services</a></li>
-            <li><a href="blog.html" class="mobile-nav-link">Blog</a></li>
-            <li><a href="contact.html" class="mobile-nav-link">Contact</a></li>
-        </ul>
-        <a href="https://cal.com/themdemosites/30min" class="btn btn-primary btn-lg mobile-cta">Book Appointment</a>
     </div>
+</nav>
 
-    <main>
-        <section class="section page-hero">
-            <div class="container">
-                <div class="page-hero-content animate-on-scroll">
-                    <span class="section-tag">Blog</span>
-                    <h1 class="page-hero-title">Health & Wellness Blog</h1>
-                    <p class="page-hero-subtitle">Expert health tips, medical insights, and wellness advice from our trusted healthcare team.</p>
-                </div>
-            </div>
-        </section>
+<div class="mobile-overlay" id="mobileOverlay"></div>
+<div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu-header">
+        <span class="nav-logo-mark" style="width:28px;height:28px;"><svg viewBox="0 0 18 18" fill="none" width="16" height="16"><circle cx="9" cy="9" r="5" stroke="#fff" stroke-width="2" fill="none"/><path d="M9 4v10M4 9h10" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg></span>
+        <span class="nav-logo-text">Them Demo Clinic 2</span>
+    </div>
+    <ul class="mobile-nav-links">
+        <li><a href="index.html" class="mobile-nav-link">Home</a></li>
+        <li><a href="about.html" class="mobile-nav-link">About</a></li>
+        <li><a href="doctors.html" class="mobile-nav-link">Doctors</a></li>
+        <li><a href="services.html" class="mobile-nav-link">Departments</a></li>
+        <li><a href="testimonials.html" class="mobile-nav-link">Testimonials</a></li>
+        <li><a href="faq.html" class="mobile-nav-link">FAQ</a></li>
+        <li><a href="insurance.html" class="mobile-nav-link">Insurance</a></li>
+        <li><a href="blog.html" class="mobile-nav-link">Blog</a></li>
+        <li><a href="contact.html" class="mobile-nav-link">Contact</a></li>
+    </ul>
+    <span class="btn btn-primary mobile-cta btn-book">Book Appointment</span>
+</div>
 
-        <section class="section blog-section">
-            <div class="container">
-                <div class="blog-grid">
-                    <div class="blog-card animate-on-scroll" data-delay="0">
-                        <div class="blog-image">
-                            <div class="blog-placeholder" style="background: linear-gradient(135deg, #0EA5E9, #0284C7);">
-                                <i class="fas fa-heart"></i>
-                            </div>
-                            <span class="blog-date">June 15, 2026</span>
-                        </div>
-                        <div class="blog-content">
-                            <span class="blog-tag">Cardiology</span>
-                            <h3>Heart Health Tips for a Longer Life</h3>
-                            <p>Simple lifestyle changes and habits that can significantly improve your cardiovascular health and longevity.</p>
-                            <a href="#" class="blog-read-more">Read More <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                    <div class="blog-card animate-on-scroll" data-delay="100">
-                        <div class="blog-image">
-                            <div class="blog-placeholder" style="background: linear-gradient(135deg, #10B981, #059669);">
-                                <i class="fas fa-hand"></i>
-                            </div>
-                            <span class="blog-date">May 28, 2026</span>
-                        </div>
-                        <div class="blog-content">
-                            <span class="blog-tag">Dermatology</span>
-                            <h3>Understanding Common Skin Conditions</h3>
-                            <p>Learn to identify and manage common skin issues from acne and eczema to psoriasis with expert guidance.</p>
-                            <a href="#" class="blog-read-more">Read More <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                    <div class="blog-card animate-on-scroll" data-delay="200">
-                        <div class="blog-image">
-                            <div class="blog-placeholder" style="background: linear-gradient(135deg, #8B5CF6, #7C3AED);">
-                                <i class="fas fa-calendar-check"></i>
-                            </div>
-                            <span class="blog-date">May 10, 2026</span>
-                        </div>
-                        <div class="blog-content">
-                            <span class="blog-tag">Preventive Care</span>
-                            <h3>The Importance of Regular Health Checkups</h3>
-                            <p>Why routine screenings and annual physicals are essential for early detection and maintaining optimal health.</p>
-                            <a href="#" class="blog-read-more">Read More <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer class="footer">
+<main>
+    <section class="section" style="padding-top:7rem;">
         <div class="container">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <a href="index.html" class="logo">
-                        <svg width="36" height="36" viewBox="0 0 36 36" fill="none"><rect x="12" y="3" width="12" height="30" rx="2" fill="#0EA5E9"/><rect x="3" y="12" width="30" height="12" rx="2" fill="#0EA5E9"/></svg>
-                        <span class="logo-text">Aura<span>Med</span></span>
-                    </a>
-                    <div class="footer-contact-row">
-                        <a href="mailto:info@auramedical.com"><i class="fas fa-envelope"></i> info@auramedical.com</a>
-                        <span><i class="fas fa-map-marker-alt"></i> Chennai-17</span>
-                        <span><i class="fas fa-phone-alt"></i> 044 2345 6789</span>
+            <div class="section-header">
+                <span class="section-tag">Blog</span>
+                <h2 class="section-title">Health <span class="text-gradient">Insights</span></h2>
+                <p class="section-text">Expert advice, wellness tips, and medical news from our trusted healthcare team.</p>
+            </div>
+
+            <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;">
+                <article class="blog-preview-card fade-up">
+                    <img class="blog-preview-img" src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=600&q=80" alt="Heart health" loading="lazy">
+                    <div class="blog-preview-body">
+                        <div class="blog-preview-meta"><span>Cardiology</span> &middot; 5 min read</div>
+                        <h3>5 Early Warning Signs of Heart Disease You Shouldn't Ignore</h3>
+                        <p>Chest discomfort, shortness of breath, fatigue — learn which symptoms warrant immediate attention and when to see a cardiologist.</p>
+                        <a href="#" class="btn-text">Read More <i class="fas fa-arrow-right"></i></a>
                     </div>
-                    <p>Compassionate healthcare with advanced medical expertise, putting your well-being first.</p>
-                    <div class="footer-social">
-                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </article>
+                <article class="blog-preview-card fade-up" data-delay="100">
+                    <img class="blog-preview-img" src="https://images.unsplash.com/photo-1578496479914-7ef3b0193be3?auto=format&fit=crop&w=600&q=80" alt="Brain health" loading="lazy">
+                    <div class="blog-preview-body">
+                        <div class="blog-preview-meta"><span>Neurology</span> &middot; 4 min read</div>
+                        <h3>Understanding Migraines: Triggers, Treatments & When to See a Specialist</h3>
+                        <p>Chronic headaches affect millions. Discover common triggers, effective treatment options, and signs it's time to consult a neurologist.</p>
+                        <a href="#" class="btn-text">Read More <i class="fas fa-arrow-right"></i></a>
                     </div>
+                </article>
+                <article class="blog-preview-card fade-up" data-delay="200">
+                    <img class="blog-preview-img" src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?auto=format&fit=crop&w=600&q=80" alt="Child health" loading="lazy">
+                    <div class="blog-preview-body">
+                        <div class="blog-preview-meta"><span>Pediatrics</span> &middot; 3 min read</div>
+                        <h3>Essential Vaccination Schedule: Protecting Your Child at Every Age</h3>
+                        <p>A comprehensive guide to childhood immunizations — from birth through adolescence — and why each vaccine matters for long-term health.</p>
+                        <a href="#" class="btn-text">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+                <article class="blog-preview-card fade-up" data-delay="50">
+                    <img class="blog-preview-img" src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=600&q=80" alt="Knee pain" loading="lazy">
+                    <div class="blog-preview-body">
+                        <div class="blog-preview-meta"><span>Orthopedics</span> &middot; 6 min read</div>
+                        <h3>Knee Replacement Surgery: What to Expect Before, During & After</h3>
+                        <p>From pre-op preparation to post-surgery rehabilitation — a complete walkthrough of the knee replacement journey with expert insights from our surgeons.</p>
+                        <a href="#" class="btn-text">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+                <article class="blog-preview-card fade-up" data-delay="150">
+                    <img class="blog-preview-img" src="https://images.unsplash.com/photo-1556228578-567ba127e784?auto=format&fit=crop&w=600&q=80" alt="Skincare" loading="lazy">
+                    <div class="blog-preview-body">
+                        <div class="blog-preview-meta"><span>Dermatology</span> &middot; 4 min read</div>
+                        <h3>Daily Skincare Routine: A Dermatologist's Guide to Healthy Skin</h3>
+                        <p>Simple, evidence-based steps for every skin type. Cleanse, treat, moisturize, protect — learn what really works from our dermatology team.</p>
+                        <a href="#" class="btn-text">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+                <article class="blog-preview-card fade-up" data-delay="250">
+                    <img class="blog-preview-img" src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=600&q=80" alt="Wellness" loading="lazy">
+                    <div class="blog-preview-body">
+                        <div class="blog-preview-meta"><span>Wellness</span> &middot; 3 min read</div>
+                        <h3>Preventive Health Checkups: Which Tests Do You Need at Every Age?</h3>
+                        <p>Annual physicals, blood work, cancer screenings — stay on top of your health with our age-based preventive care recommendations.</p>
+                        <a href="#" class="btn-text">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+                <article class="blog-preview-card fade-up" data-delay="100">
+                    <img class="blog-preview-img" src="https://images.unsplash.com/photo-1559757175-5700dde675bc?auto=format&fit=crop&w=600&q=80" alt="General medicine" loading="lazy">
+                    <div class="blog-preview-body">
+                        <div class="blog-preview-meta"><span>General Medicine</span> &middot; 5 min read</div>
+                        <h3>Managing Blood Pressure Naturally: Diet, Exercise & Lifestyle Changes</h3>
+                        <p>Hypertension affects 1 in 3 adults. Learn how small daily changes can significantly lower your blood pressure and reduce cardiac risk.</p>
+                        <a href="#" class="btn-text">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+                <article class="blog-preview-card fade-up" data-delay="200">
+                    <img class="blog-preview-img" src="https://images.unsplash.com/photo-1559757175-5700dde675bc?auto=format&fit=crop&w=600&q=80" alt="Nutrition" loading="lazy">
+                    <div class="blog-preview-body">
+                        <div class="blog-preview-meta"><span>Nutrition</span> &middot; 4 min read</div>
+                        <h3>The Role of Nutrition in Managing Chronic Diseases</h3>
+                        <p>How strategic dietary choices can help manage diabetes, heart disease, and autoimmune conditions — practical tips from our clinical nutritionists.</p>
+                        <a href="#" class="btn-text">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+                <article class="blog-preview-card fade-up" data-delay="300">
+                    <img class="blog-preview-img" src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=600&q=80" alt="Mental health" loading="lazy">
+                    <div class="blog-preview-body">
+                        <div class="blog-preview-meta"><span>Mental Health</span> &middot; 6 min read</div>
+                        <h3>Stress, Anxiety & Your Physical Health: The Mind-Body Connection</h3>
+                        <p>Chronic stress doesn't just affect your mood — it impacts your heart, digestion, and immune system. Learn integrated approaches to wellness.</p>
+                        <a href="#" class="btn-text">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="section cta" style="padding-top:2rem;">
+        <div class="container">
+            <div class="cta-card">
+                <div class="cta-bg-pattern"><span></span><span></span><span></span></div>
+                <h2 class="cta-title">Want Personalized Health Advice?</h2>
+                <p class="cta-text">Book a consultation with our specialists and get answers tailored to your health.</p>
+                <div class="cta-actions">
+                    <span class="btn btn-gold btn-lg btn-book">Book Appointment <i class="fas fa-calendar-check"></i></span>
                 </div>
-                <div class="footer-links">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="blog.html">Blog</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-links">
-                    <h4>Departments</h4>
-                    <ul>
-                        <li><a href="services.html">Cardiology</a></li>
-                        <li><a href="services.html">Dermatology</a></li>
-                        <li><a href="services.html">Neurology</a></li>
-                        <li><a href="services.html">Pediatrics</a></li>
-                        <li><a href="services.html">Orthopedics</a></li>
-                    </ul>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="index.html" class="nav-logo" style="margin-bottom:1rem;">
+                    <span class="nav-logo-mark" style="width:30px;height:30px;"><svg viewBox="0 0 18 18" fill="none" width="16" height="16"><circle cx="9" cy="9" r="5" stroke="#fff" stroke-width="2" fill="none"/><path d="M9 4v10M4 9h10" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg></span>
+                    <span class="nav-logo-text">Them Demo Clinic 2</span>
+                </a>
+                <p>Thoughtful healthcare. Rooted in expertise, driven by compassion.</p>
+                <div class="footer-social">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                 </div>
                 <div class="footer-newsletter">
-                    <h4>Book an Appointment</h4>
-                    <p>Ready to see a doctor? Schedule a consultation at your convenience.</p>
-                    <a href="https://cal.com/themdemosites/30min" class="btn btn-primary btn-full">
-                        <i class="fas fa-calendar"></i> Book Now
-                    </a>
+                    <p>Subscribe to health tips & updates</p>
+                    <form id="footerNewsletter">
+                        <input type="email" placeholder="your@email.com" required>
+                        <button type="submit" class="btn btn-primary" style="padding:0.5rem 0.9rem;font-size:0.72rem;">Subscribe</button>
+                    </form>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 Aura Medical Center. All rights reserved.</p>
-                <div class="footer-bottom-links">
-                    <a href="#">Privacy Policy</a>
-                    <a href="#">Terms of Service</a>
-                </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="doctors.html">Doctors</a></li>
+                    <li><a href="services.html">Departments</a></li>
+                    <li><a href="testimonials.html">Testimonials</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="insurance.html">Insurance</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Departments</h4>
+                <ul>
+                    <li><a href="services.html#cardiology">Cardiology</a></li>
+                    <li><a href="services.html#neurology">Neurology</a></li>
+                    <li><a href="services.html#pediatrics">Pediatrics</a></li>
+                    <li><a href="services.html#orthopedics">Orthopedics</a></li>
+                </ul>
+            </div>
+            <div class="footer-hours">
+                <h4>Hours</h4>
+                <ul>
+                    <li><span>Mon — Fri</span><span>8:00 AM — 8:00 PM</span></li>
+                    <li><span>Saturday</span><span>9:00 AM — 5:00 PM</span></li>
+                    <li><span>Sunday</span><span>Emergency Only</span></li>
+                </ul>
+                <span class="btn btn-primary btn-full btn-book" style="margin-top:1rem;">Book Appointment</span>
             </div>
         </div>
-    </footer>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Them Demo Clinic 2. All rights reserved.</p>
+            <div class="footer-bottom-links">
+                <a href="#">Privacy</a>
+                <a href="#">Terms</a>
+            </div>
+        </div>
+    </div>
+</footer>
 
-    <a href="index.html" class="back-to-top" id="backToTop">
-        <i class="fas fa-chevron-up"></i>
-    </a>
-
-    <script src="script.js"></script>
-    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateInit"></script>
-    <script>
-        function googleTranslateInit() {
-            new google.translate.TranslateElement({
-                pageLanguage: 'en',
-                includedLanguages: 'ta,en',
-                layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-                autoDisplay: false
-            }, 'google_translate_element');
-        }
-        document.getElementById('translateBtn').addEventListener('click', function() {
-            document.getElementById('google_translate_element').classList.toggle('open');
-        });
-        document.addEventListener('click', function(e) {
-            const container = document.querySelector('.nav-actions div');
-            if (container && !container.contains(e.target)) {
-                document.getElementById('google_translate_element').classList.remove('open');
-            }
-        });
-    </script>
+<a href="#" id="backTop" aria-label="Back to top"><i class="fas fa-arrow-up"></i></a>
+<script src="script.js"></script>
 </body>
 </html>

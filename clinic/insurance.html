@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Doctors | Them Demo Clinic 2</title>
+    <title>Insurance | Them Demo Clinic 2</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
@@ -11,22 +11,6 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://app.cal.com/embed.css" rel="stylesheet">
     <script type="text/javascript" src="https://app.cal.com/embed.js"></script>
-    <style>
-        .doctors-page-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
-        .doctor-card-full { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-lg); overflow: hidden; transition: all 0.4s var(--ease); }
-        .doctor-card-full:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); border-color: var(--border-hover); }
-        .doctor-card-img { width: 100%; height: 240px; object-fit: cover; display: block; background: var(--bg-alt); }
-        .doctor-card-body { padding: 1.5rem; }
-        .doctor-card-body h3 { font-family: var(--font-display); font-size: 1.1rem; font-weight: 700; color: var(--text); margin-bottom: 0.15rem; }
-        .doctor-card-body .doctor-specialty { font-size: 0.78rem; color: var(--accent); font-weight: 600; margin-bottom: 0.4rem; }
-        .doctor-card-body .doctor-creds { font-size: 0.72rem; color: var(--text-muted); margin-bottom: 0.75rem; }
-        .doctor-card-body p { font-size: 0.82rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 1.25rem; }
-        @media (max-width: 1024px) { .doctors-page-grid { grid-template-columns: repeat(2, 1fr); } }
-        @media (max-width: 600px) { .doctors-page-grid { grid-template-columns: 1fr; } }
-        .page-hero { padding: 8rem 0 3rem; text-align: center; position: relative; }
-        .page-hero::after { content: ''; position: absolute; inset: 0; background: url('https://images.unsplash.com/photo-1551076805-e1869033e561?auto=format&fit=crop&w=1920&q=80') center / cover; opacity: 0.04; pointer-events: none; }
-        .page-hero-subtitle { color: var(--text-secondary); font-size: 1rem; max-width: 520px; margin: 0.5rem auto 0; }
-    </style>
 </head>
 <body>
 
@@ -44,11 +28,11 @@
             <ul class="nav-links" id="navLinks">
                 <li><a href="index.html" class="nav-link">Home</a></li>
                 <li><a href="about.html" class="nav-link">About</a></li>
-                <li><a href="doctors.html" class="nav-link active">Doctors</a></li>
+                <li><a href="doctors.html" class="nav-link">Doctors</a></li>
                 <li><a href="services.html" class="nav-link">Departments</a></li>
                 <li><a href="testimonials.html" class="nav-link">Testimonials</a></li>
                 <li><a href="faq.html" class="nav-link">FAQ</a></li>
-                <li><a href="insurance.html" class="nav-link">Insurance</a></li>
+                <li><a href="insurance.html" class="nav-link active">Insurance</a></li>
                 <li><a href="blog.html" class="nav-link">Blog</a></li>
                 <li><a href="contact.html" class="nav-link">Contact</a></li>
             </ul>
@@ -83,77 +67,63 @@
 </div>
 
 <main>
-    <section class="page-hero">
+    <section class="section" style="padding-top:7rem;">
         <div class="container">
-            <span class="section-tag">Our Team</span>
-            <h1 class="page-hero-title">Meet Your Doctors</h1>
-            <p class="page-hero-subtitle">Experienced specialists dedicated to providing you with the highest quality of care in a warm and welcoming environment.</p>
+            <div class="section-header">
+                <span class="section-tag">Insurance</span>
+                <h2 class="section-title">Accepted <span class="text-gradient">Insurance Plans</span></h2>
+                <p class="section-text">We work with most major insurance providers to ensure you get the care you need.</p>
+            </div>
+
+            <div class="insurance-grid" style="margin-bottom:3rem;">
+                <div class="insurance-card fade-up"><div class="ins-icon"><i class="fas fa-shield-alt"></i></div><h3>ICICI Lombard</h3><p>Comprehensive health insurance plans</p></div>
+                <div class="insurance-card fade-up" data-delay="50"><div class="ins-icon"><i class="fas fa-shield-alt"></i></div><h3>Star Health</h3><p>Widely accepted across all departments</p></div>
+                <div class="insurance-card fade-up" data-delay="100"><div class="ins-icon"><i class="fas fa-shield-alt"></i></div><h3>Apollo Munich</h3><p>Cashless treatment available</p></div>
+                <div class="insurance-card fade-up" data-delay="50"><div class="ins-icon"><i class="fas fa-shield-alt"></i></div><h3>HDFC Ergo</h3><p>Corporate and individual plans</p></div>
+                <div class="insurance-card fade-up" data-delay="100"><div class="ins-icon"><i class="fas fa-shield-alt"></i></div><h3>Niva Bupa</h3><p>Formerly Max Bupa — accepted</p></div>
+                <div class="insurance-card fade-up" data-delay="150"><div class="ins-icon"><i class="fas fa-shield-alt"></i></div><h3>Care Health Insurance</h3><p>Formerly Religare — all plans covered</p></div>
+                <div class="insurance-card fade-up" data-delay="50"><div class="ins-icon"><i class="fas fa-shield-alt"></i></div><h3>Bajaj Allianz</h3><p>Individual and family floater plans</p></div>
+                <div class="insurance-card fade-up" data-delay="100"><div class="ins-icon"><i class="fas fa-shield-alt"></i></div><h3>New India Assurance</h3><p>Public sector insurance accepted</p></div>
+                <div class="insurance-card fade-up" data-delay="150"><div class="ins-icon"><i class="fas fa-shield-alt"></i></div><h3>United India Insurance</h3><p>Government health schemes covered</p></div>
+                <div class="insurance-card fade-up" data-delay="100"><div class="ins-icon"><i class="fas fa-shield-alt"></i></div><h3>Oriental Insurance</h3><p>Public sector health policies</p></div>
+                <div class="insurance-card fade-up" data-delay="150"><div class="ins-icon"><i class="fas fa-shield-alt"></i></div><h3>Aditya Birla Health</h3><p>Active health and wellness plans</p></div>
+                <div class="insurance-card fade-up" data-delay="200"><div class="ins-icon"><i class="fas fa-shield-alt"></i></div><h3>ManipalCigna Health</h3><p>Premium health insurance accepted</p></div>
+            </div>
+
+            <div class="about-page-grid" style="margin-top:2rem;border-top:1px solid var(--border);padding-top:3rem;">
+                <div class="fade-in-left">
+                    <span class="section-tag">How It Works</span>
+                    <h2 class="section-title" style="font-size:1.6rem;">Using Your <span class="text-gradient">Insurance</span></h2>
+                    <ul style="list-style:none;margin-top:1.5rem;display:flex;flex-direction:column;gap:1.25rem;">
+                        <li style="display:flex;align-items:flex-start;gap:1rem;"><span style="width:32px;height:32px;border-radius:50%;background:var(--accent-subtle);color:var(--accent);display:flex;align-items:center;justify-content:center;font-size:0.8rem;font-weight:700;flex-shrink:0;">1</span><div><strong style="color:var(--text);">Verify Your Coverage</strong><br><span style="font-size:0.85rem;color:var(--text-secondary);">Call us or bring your insurance card to your first visit. Our billing team will verify your coverage and explain any co-pays or deductibles upfront.</span></div></li>
+                        <li style="display:flex;align-items:flex-start;gap:1rem;"><span style="width:32px;height:32px;border-radius:50%;background:var(--accent-subtle);color:var(--accent);display:flex;align-items:center;justify-content:center;font-size:0.8rem;font-weight:700;flex-shrink:0;">2</span><div><strong style="color:var(--text);">Receive Treatment</strong><br><span style="font-size:0.85rem;color:var(--text-secondary);">Get the care you need. We'll handle the insurance paperwork for cashless claims where applicable, so you can focus on your health.</span></div></li>
+                        <li style="display:flex;align-items:flex-start;gap:1rem;"><span style="width:32px;height:32px;border-radius:50%;background:var(--accent-subtle);color:var(--accent);display:flex;align-items:center;justify-content:center;font-size:0.8rem;font-weight:700;flex-shrink:0;">3</span><div><strong style="color:var(--text);">Settlement & Follow-Up</strong><br><span style="font-size:0.85rem;color:var(--text-secondary);">We file the claim directly with your insurer. Any balance or uncovered portion will be clearly communicated before any payment is due.</span></div></li>
+                    </ul>
+                </div>
+                <div class="fade-in-right">
+                    <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-lg);padding:2rem;">
+                        <h3 style="font-family:var(--font-display);font-size:1.1rem;font-weight:700;color:var(--text);margin-bottom:1rem;"><i class="fas fa-circle-info" style="color:var(--accent);"></i> Not Sure About Your Plan?</h3>
+                        <p style="font-size:0.85rem;color:var(--text-secondary);line-height:1.8;margin-bottom:1.5rem;">Our dedicated billing team can help verify your insurance coverage before your visit. Just give us a call or send us a message with your policy details.</p>
+                        <div style="display:flex;flex-direction:column;gap:0.75rem;">
+                            <a href="tel:+919999988888" class="btn btn-outline btn-lg" style="justify-content:center;"><i class="fas fa-phone"></i> +91 99999 88888</a>
+                            <a href="contact.html" class="btn btn-primary btn-lg" style="justify-content:center;">Contact Billing Team <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <section class="section" style="padding-top:0;">
+    <section class="section" style="background:var(--bg-alt);">
         <div class="container">
-            <div class="doctors-page-grid">
-                <div class="doctor-card-full fade-up">
-                    <img class="doctor-card-img" src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=400&q=80" alt="Dr. Sarah Chen" loading="lazy">
-                    <div class="doctor-card-body">
-                        <h3>Dr. Sarah Chen</h3>
-                        <div class="doctor-specialty">Cardiologist</div>
-                        <div class="doctor-creds">MD, FACC — 18 yrs experience</div>
-                        <p>Leading our cardiology department with expertise in interventional cardiology and preventive heart health. Board-certified with a focus on patient education.</p>
-                        <span class="btn btn-primary btn-sm btn-book">Book Appointment</span>
-                    </div>
-                </div>
-                <div class="doctor-card-full fade-up" data-delay="100">
-                    <img class="doctor-card-img" src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?auto=format&fit=crop&w=400&q=80" alt="Dr. Michael Torres" loading="lazy">
-                    <div class="doctor-card-body">
-                        <h3>Dr. Michael Torres</h3>
-                        <div class="doctor-specialty">Neurologist</div>
-                        <div class="doctor-creds">MD, PhD — 15 yrs experience</div>
-                        <p>Specializes in neurodegenerative disorders and stroke rehabilitation. Combines advanced diagnostics with compassionate, long-term patient care.</p>
-                        <span class="btn btn-primary btn-sm btn-book">Book Appointment</span>
-                    </div>
-                </div>
-                <div class="doctor-card-full fade-up" data-delay="200">
-                    <img class="doctor-card-img" src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=400&q=80" alt="Dr. Priya Mehta" loading="lazy">
-                    <div class="doctor-card-body">
-                        <h3>Dr. Priya Mehta</h3>
-                        <div class="doctor-specialty">Pediatrician</div>
-                        <div class="doctor-creds">MD, FAAP — 12 yrs experience</div>
-                        <p>Dedicated to children's health from infancy through adolescence. Known for her gentle approach and ability to put young patients at ease.</p>
-                        <span class="btn btn-primary btn-sm btn-book">Book Appointment</span>
-                    </div>
-                </div>
-                <div class="doctor-card-full fade-up" data-delay="100">
-                    <img class="doctor-card-img" src="https://images.unsplash.com/photo-1622253692010-333f2da2031d?auto=format&fit=crop&w=400&q=80" alt="Dr. James Okonkwo" loading="lazy">
-                    <div class="doctor-card-body">
-                        <h3>Dr. James Okonkwo</h3>
-                        <div class="doctor-specialty">Orthopedic Surgeon</div>
-                        <div class="doctor-creds">MD, FACS — 20 yrs experience</div>
-                        <p>Expert in joint reconstruction and sports medicine. Has performed over 3,000 successful procedures with a focus on minimally invasive techniques.</p>
-                        <span class="btn btn-primary btn-sm btn-book">Book Appointment</span>
-                    </div>
-                </div>
-                <div class="doctor-card-full fade-up" data-delay="200">
-                    <img class="doctor-card-img" src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?auto=format&fit=crop&w=400&q=80" alt="Dr. Emily Watson" loading="lazy">
-                    <div class="doctor-card-body">
-                        <h3>Dr. Emily Watson</h3>
-                        <div class="doctor-specialty">Dermatologist</div>
-                        <div class="doctor-creds">MD, FAAD — 10 yrs experience</div>
-                        <p>Offers comprehensive medical and cosmetic dermatology services. Passionate about skin cancer prevention and evidence-based skincare.</p>
-                        <span class="btn btn-primary btn-sm btn-book">Book Appointment</span>
-                    </div>
-                </div>
-                <div class="doctor-card-full fade-up" data-delay="300">
-                    <img class="doctor-card-img" src="https://images.unsplash.com/photo-1537368910025-700350fe46c7?auto=format&fit=crop&w=400&q=80" alt="Dr. David Park" loading="lazy">
-                    <div class="doctor-card-body">
-                        <h3>Dr. David Park</h3>
-                        <div class="doctor-specialty">General Practitioner</div>
-                        <div class="doctor-creds">MD, MPH — 14 yrs experience</div>
-                        <p>Your first point of contact for comprehensive primary care. Trained in preventive medicine, chronic disease management, and holistic wellness.</p>
-                        <span class="btn btn-primary btn-sm btn-book">Book Appointment</span>
-                    </div>
-                </div>
+            <div class="section-header">
+                <span class="section-tag">Payment Options</span>
+                <h2 class="section-title">Other Ways to <span class="text-gradient">Pay</span></h2>
+            </div>
+            <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;">
+                <div class="insurance-card fade-up"><div class="ins-icon"><i class="fas fa-credit-card"></i></div><h3>Credit & Debit Cards</h3><p>Visa, Mastercard, RuPay, and Amex accepted</p></div>
+                <div class="insurance-card fade-up" data-delay="100"><div class="ins-icon"><i class="fas fa-mobile-screen-button"></i></div><h3>UPI & Mobile Wallets</h3><p>Google Pay, PhonePe, Paytm, BHIM UPI</p></div>
+                <div class="insurance-card fade-up" data-delay="200"><div class="ins-icon"><i class="fas fa-building-columns"></i></div><h3>Net Banking & EMI</h3><p>All major banks; EMI options for procedures</p></div>
             </div>
         </div>
     </section>
@@ -162,8 +132,8 @@
         <div class="container">
             <div class="cta-card">
                 <div class="cta-bg-pattern"><span></span><span></span><span></span></div>
-                <h2 class="cta-title">Find the Right Specialist for You</h2>
-                <p class="cta-text">Not sure which doctor to see? Reach out and we'll help match you with the perfect provider.</p>
+                <h2 class="cta-title">Ready to Book Your Visit?</h2>
+                <p class="cta-text">Your health journey starts here. We'll help you navigate insurance and payment.</p>
                 <div class="cta-actions">
                     <span class="btn btn-gold btn-lg btn-book">Book Appointment <i class="fas fa-calendar-check"></i></span>
                 </div>
@@ -239,7 +209,6 @@
 </footer>
 
 <a href="#" id="backTop" aria-label="Back to top"><i class="fas fa-arrow-up"></i></a>
-
 <script src="script.js"></script>
 </body>
 </html>

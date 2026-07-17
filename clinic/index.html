@@ -170,6 +170,38 @@
         </div>
     </section>
 
+    <section class="section" style="background:var(--bg-alt);">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">How It Works</span>
+                <h2 class="section-title">Your Journey to <span class="text-gradient">Better Health</span></h2>
+                <p class="section-text">From booking to follow-up — we make healthcare simple and stress-free.</p>
+            </div>
+            <div class="process-grid">
+                <div class="process-card fade-up">
+                    <div class="process-icon"><i class="fas fa-calendar-check"></i></div>
+                    <h3>Book an Appointment</h3>
+                    <p>Choose your preferred doctor and pick a time that fits your schedule — online or by phone.</p>
+                </div>
+                <div class="process-card fade-up" data-delay="100">
+                    <div class="process-icon"><i class="fas fa-user-md"></i></div>
+                    <h3>Meet Your Doctor</h3>
+                    <p>Arrive at our welcoming clinic and meet your specialist in a calm, private consultation room.</p>
+                </div>
+                <div class="process-card fade-up" data-delay="200">
+                    <div class="process-icon"><i class="fas fa-stethoscope"></i></div>
+                    <h3>Get Diagnosed & Treated</h3>
+                    <p>Receive a thorough evaluation, accurate diagnosis, and a personalized treatment plan.</p>
+                </div>
+                <div class="process-card fade-up" data-delay="300">
+                    <div class="process-icon"><i class="fas fa-heart-pulse"></i></div>
+                    <h3>Follow-Up & Recover</h3>
+                    <p>Stay on track with scheduled follow-ups, rehabilitation, and ongoing support from our team.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section class="section services" id="services">
         <div class="container">
             <div class="section-header">
@@ -426,6 +458,62 @@
         </div>
     </section>
 
+    <section class="section" style="background:var(--bg-alt);">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">From Our Blog</span>
+                <h2 class="section-title">Latest Health <span class="text-gradient">Insights</span></h2>
+            </div>
+            <div class="blog-preview-grid">
+                <a href="blog.html" class="blog-preview-card fade-up" style="text-decoration:none;">
+                    <img class="blog-preview-img" src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=600&q=80" alt="Heart health" loading="lazy">
+                    <div class="blog-preview-body">
+                        <div class="blog-preview-meta"><span>Cardiology</span> &middot; 5 min read</div>
+                        <h3>5 Early Warning Signs of Heart Disease</h3>
+                        <p>Learn which symptoms warrant immediate attention and when to see a cardiologist.</p>
+                        <span class="btn-text">Read More <i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </a>
+                <a href="blog.html" class="blog-preview-card fade-up" style="text-decoration:none;" data-delay="100">
+                    <img class="blog-preview-img" src="https://images.unsplash.com/photo-1578496479914-7ef3b0193be3?auto=format&fit=crop&w=600&q=80" alt="Brain health" loading="lazy">
+                    <div class="blog-preview-body">
+                        <div class="blog-preview-meta"><span>Neurology</span> &middot; 4 min read</div>
+                        <h3>Understanding Migraines: Triggers & Treatments</h3>
+                        <p>Discover common triggers and effective treatment options for chronic headaches.</p>
+                        <span class="btn-text">Read More <i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </a>
+                <a href="blog.html" class="blog-preview-card fade-up" style="text-decoration:none;" data-delay="200">
+                    <img class="blog-preview-img" src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?auto=format&fit=crop&w=600&q=80" alt="Child health" loading="lazy">
+                    <div class="blog-preview-body">
+                        <div class="blog-preview-meta"><span>Pediatrics</span> &middot; 3 min read</div>
+                        <h3>Essential Vaccination Schedule for Children</h3>
+                        <p>A comprehensive guide to childhood immunizations from birth through adolescence.</p>
+                        <span class="btn-text">Read More <i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </a>
+            </div>
+            <div style="text-align:center;margin-top:2rem;">
+                <a href="blog.html" class="btn btn-outline">View All Articles <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <section class="newsletter-section">
+        <div class="container">
+            <div class="newsletter-inner">
+                <div class="newsletter-text">
+                    <h2>Stay Healthy, Stay Informed</h2>
+                    <p>Get weekly health tips, expert advice, and clinic updates delivered to your inbox.</p>
+                </div>
+                <form class="newsletter-form" id="footerNewsletter">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit" class="btn btn-gold">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
     <section class="section cta">
         <div class="container">
             <div class="cta-card">
@@ -462,6 +550,13 @@
                     <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
                     <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                 </div>
+                <div class="footer-newsletter">
+                    <p>Subscribe to health tips & updates</p>
+                    <form id="footerNewsletter">
+                        <input type="email" placeholder="your@email.com" required>
+                        <button type="submit" class="btn btn-primary" style="padding:0.5rem 0.9rem;font-size:0.72rem;">Subscribe</button>
+                    </form>
+                </div>
             </div>
             <div class="footer-links">
                 <h4>Quick Links</h4>
@@ -472,6 +567,8 @@
                     <li><a href="services.html">Departments</a></li>
                     <li><a href="testimonials.html">Testimonials</a></li>
                     <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="insurance.html">Insurance</a></li>
+                    <li><a href="blog.html">Blog</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>

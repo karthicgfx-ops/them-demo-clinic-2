@@ -178,7 +178,45 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    document.querySelectorAll('.service-card, .doctor-card, .service-detail, .why-card').forEach(addTilt);
+    document.querySelectorAll('.service-card, .doctor-card, .service-detail, .why-card, .process-card, .insurance-card, .blog-preview-card, .tm-card, .doctor-card-full').forEach(addTilt);
+
+    const fadeObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const delay = entry.target.getAttribute('data-delay') || 0;
+                setTimeout(() => entry.target.classList.add('visible'), parseInt(delay));
+                fadeObserver.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+    document.querySelectorAll('.fade-in-left, .fade-in-right').forEach(el => fadeObserver.observe(el));
+
+    document.querySelectorAll('.parallax-section').forEach(section => {
+        const bg = section.querySelector('.parallax-bg');
+        if (!bg) return;
+        window.addEventListener('scroll', () => {
+            const rect = section.getBoundingClientRect();
+            const offset = rect.top * 0.15;
+            bg.style.transform = `translateY(${offset}px)`;
+        });
+    });
+
+    const newsletterForm = document.getElementById('footerNewsletter');
+    if (newsletterForm) {
+        newsletterForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const input = newsletterForm.querySelector('input');
+            const btn = newsletterForm.querySelector('button');
+            const original = btn.innerHTML;
+            btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i>';
+            btn.disabled = true;
+            setTimeout(() => {
+                btn.innerHTML = '<i class="fas fa-check"></i>';
+                input.value = '';
+                setTimeout(() => { btn.innerHTML = original; btn.disabled = false; }, 2000);
+            }, 1200);
+        });
 
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
