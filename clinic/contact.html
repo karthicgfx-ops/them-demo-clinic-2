@@ -74,7 +74,7 @@
     <section class="section section-contact" style="padding-top:1rem;">
         <div class="container">
             <div class="contact-grid">
-                <div class="contact-form-w fade-up">
+                <div class="contact-form-w">
                     <h3>Send Us a Message</h3>
                     <form id="contactForm">
                         <div class="form-row">
@@ -117,7 +117,7 @@
                     <hr style="border:none;border-top:1px solid var(--border);margin:2rem 0;">
                     <h3>Book an Appointment</h3>
                     <p style="font-size:0.85rem;color:var(--text-secondary);margin-bottom:1.25rem;">Pick a convenient date and time from the calendar below.</p>
-                    <div data-cal-link="themdemosites/30min" data-cal-config='{"theme":"light","layout":"month_view"}'></div>
+                    <div id="bookingCalendar"></div>
                 </div>
                 <div class="contact-info-grid">
                     <div class="contact-info-card fade-up">
@@ -220,5 +220,17 @@
 
 <button class="back-top" id="backTop"><i class="fas fa-chevron-up"></i></button>
 <script src="script.js"></script>
+<script>
+(function() {
+    var calContainer = document.getElementById('bookingCalendar');
+    if (calContainer && typeof Cal !== 'undefined') {
+        Cal('inline', {
+            elementOrSelector: calContainer,
+            calLink: 'themdemosites/30min',
+            config: { theme: 'light', layout: 'month_view' }
+        });
+    }
+})();
+</script>
 </body>
 </html>
