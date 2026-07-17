@@ -387,7 +387,7 @@ a { color: inherit; text-decoration: none; }
 .contact-grid { display: grid; grid-template-columns: 1.5fr 0.7fr; gap: 3rem; }
 .contact-form-w { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 2.5rem; }
 .contact-form-w h3 { font-family: var(--font-display); font-size: 1.2rem; font-weight: 700; margin-bottom: 1.5rem; }
-.contact-form-w [data-cal-link] { min-height: 500px; width: 100%; }
+
 .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
 .form-group { margin-bottom: 1.25rem; }
 .form-group label { display: block; font-size: 0.78rem; font-weight: 600; color: var(--text-secondary); margin-bottom: 0.4rem; }
@@ -437,4 +437,19 @@ a { color: inherit; text-decoration: none; }
     .services-page-grid { grid-template-columns: 1fr; }
     .form-row { grid-template-columns: 1fr; }
     .contact-form-w { padding: 1.5rem; }
+}
+
+.booking-modal { position: fixed; inset: 0; z-index: 9999; display: flex; align-items: center; justify-content: center; opacity: 0; visibility: hidden; transition: all 0.3s var(--ease); }
+.booking-modal.active { opacity: 1; visibility: visible; }
+.booking-modal-bg { position: absolute; inset: 0; background: rgba(0,0,0,0.45); backdrop-filter: blur(4px); }
+.booking-modal-wrap { position: relative; background: var(--bg-card); border-radius: var(--radius-lg); width: 90%; max-width: 720px; max-height: 85vh; overflow: hidden; box-shadow: var(--shadow-xl); transform: scale(0.95) translateY(12px); transition: transform 0.35s var(--ease); }
+.booking-modal.active .booking-modal-wrap { transform: scale(1) translateY(0); }
+.booking-modal-close { position: absolute; top: 0.6rem; right: 0.8rem; background: none; border: none; font-size: 1.6rem; color: var(--text-muted); cursor: pointer; z-index: 10; width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; border-radius: 50%; transition: all 0.2s var(--ease); }
+.booking-modal-close:hover { background: var(--accent-subtle); color: var(--text); }
+.booking-cal-container { min-height: 500px; width: 100%; }
+.booking-cal-container iframe { width: 100% !important; }
+
+@media (max-width: 600px) {
+    .booking-modal-wrap { max-height: 92vh; border-radius: var(--radius); }
+    .booking-cal-container { min-height: 400px; }
 }

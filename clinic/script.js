@@ -192,4 +192,53 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    const modalHtml = `
+        <div class="booking-modal" id="bookingModal">
+            <div class="booking-modal-bg"></div>
+            <div class="booking-modal-wrap">
+                <button class="booking-modal-close">&times;</button>
+                <div class="booking-cal-container" id="bookingCalContainer"></div>
+            </div>
+        </div>
+    `;
+    document.body.insertAdjacentHTML('beforeend', modalHtml);
+
+    const bookingModal = document.getElementById('bookingModal');
+    const bookingCalContainer = document.getElementById('bookingCalContainer');
+    let calInited = false;
+
+    if (bookingModal) {
+        function openBooking() {
+            bookingModal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+            if (!calInited && typeof Cal !== 'undefined') {
+                Cal('inline', {
+                    elementOrSelector: bookingCalContainer,
+                    calLink: 'themdemosites/30min',
+                    config: { theme: 'light', layout: 'month_view' }
+                });
+                calInited = true;
+            }
+        }
+
+        function closeBooking() {
+            bookingModal.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        bookingModal.querySelector('.booking-modal-bg').addEventListener('click', closeBooking);
+        bookingModal.querySelector('.booking-modal-close').addEventListener('click', closeBooking);
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeBooking();
+        });
+
+        document.querySelectorAll('a[href="https://cal.com/themdemosites/30min"], .btn-book').forEach(el => {
+            el.addEventListener('click', function (e) {
+                e.preventDefault();
+                openBooking();
+            });
+        });
+    }
+
 });
